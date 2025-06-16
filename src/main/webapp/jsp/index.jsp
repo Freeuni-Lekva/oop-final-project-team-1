@@ -2,11 +2,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>loginPage</title>
+    <title>LoginPage</title>
 </head>
 <body>
 <h1>Welcome To Homework 5 <h1>
     <p>Please log in.</p>
-
+    <form action="LoginServlet" method="post">
+        User Name: <input type="text" name="name"/> <br/>
+        Password: <input type="password" name="password"/>
+        <input type="submit" value="Login"/>
+    </form>
+    <br/>
+    <a href="CreateNewAccount.jsp">Create New Account</a>
 </body>
 </html>
