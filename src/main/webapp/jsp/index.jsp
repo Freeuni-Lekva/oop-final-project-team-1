@@ -5,9 +5,9 @@
     <title>LoginPage</title>
 </head>
 <body>
-<h1>Welcome To Homework 5 <h1>
+<h1>Welcome To QuizWebsite </h1>
     <p>Please log in.</p>
-    <form action="LoginServlet" method="post">
+    <form action="login" method="post">
         User Name: <input type="text" name="name"/> <br/>
         Password: <input type="password" name="password"/>
         <input type="submit" value="Login"/>

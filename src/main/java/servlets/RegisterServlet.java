@@ -15,7 +15,7 @@ public class RegisterServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         AccountManager accManager = (AccountManager) request.getServletContext().getAttribute("accountManager");
         if(accManager.checkIfAccountExists(request.getParameter("name"))){
-            RequestDispatcher rd = getServletContext().getRequestDispatcher("NameInUse.jsp");
+            RequestDispatcher rd = getServletContext().getRequestDispatcher("/NameInUse.jsp");
             rd.forward(request,response);
         }else{
             accManager.createAccount(request.getParameter("name"), request.getParameter("password"));

@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="Inntialize ProjectWeb Struture Test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/AccountManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Listener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/RegisterServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/CreateNewAccount.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/NameInUse.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/WrongCredentials.jsp" afterDir="false" />
+    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="LoginAndRegisterLogic with Hashing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/CreateNewAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/CreateNewAccount.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/NameInUse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/NameInUse.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/WrongCredentials.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/WrongCredentials.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +147,7 @@
       <workItem from="1749902273169" duration="526000" />
       <workItem from="1749903140161" duration="26000" />
       <workItem from="1749903175810" duration="4953000" />
-      <workItem from="1750088678613" duration="2481000" />
+      <workItem from="1750088678613" duration="8023000" />
     </task>
     <task id="LOCAL-00001" summary="added gitIgnore">
       <option name="closed" value="true" />
@@ -177,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749907191472</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="LoginAndRegisterLogic with Hashing">
+      <option name="closed" value="true" />
+      <created>1750091365526</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750091365526</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +191,7 @@
     <MESSAGE value="added gitIgnore" />
     <MESSAGE value="Inntialize ProjectWeb Structure" />
     <MESSAGE value="Inntialize ProjectWeb Struture Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inntialize ProjectWeb Struture Test" />
+    <MESSAGE value="LoginAndRegisterLogic with Hashing" />
+    <option name="LAST_COMMIT_MESSAGE" value="LoginAndRegisterLogic with Hashing" />
   </component>
 </project>

@@ -5,7 +5,7 @@
   <title>Create New Account</title>
 </head>
 <body>
-<h1>Create New Account<h1>
+<h1>Create New Account</h1>
 <p>Please enter proposed name and passwrod</p>
 <form action="RegisterServlet" method="post">
   User Name: <input type="text" name="name"/> <br/>
