@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="added gitIgnore">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="Early Draft for homePage">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,9 +32,19 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Freeuni-Lekva/oop-final-project-team-1.git&quot;,
-    &quot;accountId&quot;: &quot;6d053ece-947e-4205-bcb9-798b305b73bf&quot;
+    &quot;accountId&quot;: &quot;0c8176c7-5774-46b1-963b-512b7e943d6c&quot;
   }
 }</component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -40,51 +57,65 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Smart Tomcat.Tomcat: quiz-website.executor": "Run",
+    "Smart Tomcat.Tomcat: oop-final-project-team-1.executor": "Run",
+    "Tomcat Server.Tomcat 10.1.41.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ggulo/IdeaProjects/oop-final-project-team-1",
+    "last_opened_file_path": "C:/Users/ggulo/IdeaProjects/oop-final-project-team-1/src/main/webapp/jsp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15429688",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "terminal",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="models" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1\src\main\webapp\jsp" />
       <recent name="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1" />
       <recent name="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1\.idea" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat: quiz-website" type="com.poratu.idea.plugins.tomcat">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Tomcat: oop-final-project-team-1" type="com.poratu.idea.plugins.tomcat">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
       <predefined_log_file enabled="true" id="Tomcat Access Log" />
       <predefined_log_file id="Tomcat Catalina Log" />
       <predefined_log_file id="Tomcat Manager Log" />
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="catalinaBase" value="" />
-      <option name="contextPath" value="/quiz-website" />
-      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
+      <option name="contextPath" value="/oop-final-project-team-1" />
+      <option name="docBase" value="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1\src\main\webapp\jsp" />
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
           <option name="name" value="Apache Tomcat/10.1.41" />
-          <option name="path" value="$USER_HOME$/Desktop/apache-tomcat-10.1.41-windows-x64/apache-tomcat-10.1.41" />
+          <option name="path" value="$PROJECT_DIR$/../../../../apache-tomcat-10.1.41-windows-x64/apache-tomcat-10.1.41" />
           <option name="version" value="10.1.41.0" />
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
-      <module name="quiz-website" />
+      <module name="oop-final-project-team-1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,12 +124,15 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructureViewState">
+    <option name="selectedTab" value="JSP" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="" />
@@ -108,6 +142,9 @@
       <updated>1749900690855</updated>
       <workItem from="1749900691963" duration="1347000" />
       <workItem from="1749902273169" duration="526000" />
+      <workItem from="1749903140161" duration="26000" />
+      <workItem from="1749903175810" duration="4953000" />
+      <workItem from="1750088678613" duration="10737000" />
     </task>
     <task id="LOCAL-00001" summary="added gitIgnore">
       <option name="closed" value="true" />
@@ -117,15 +154,39 @@
       <option name="project" value="LOCAL" />
       <updated>1749902040970</updated>
     </task>
-    <task id="LOCAL-00002" summary="added gitIgnore">
+    <task id="LOCAL-00002" summary="Inntialize ProjectWeb Structure">
       <option name="closed" value="true" />
-      <created>1750161247732</created>
+      <created>1749906425443</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1750161247732</updated>
+      <updated>1749906425443</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Inntialize ProjectWeb Struture Test">
+      <option name="closed" value="true" />
+      <created>1749907191472</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749907191472</updated>
+    </task>
+    <task id="LOCAL-00004" summary="LoginAndRegisterLogic with Hashing">
+      <option name="closed" value="true" />
+      <created>1750091365526</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750091365526</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Early Draft for homePage">
+      <option name="closed" value="true" />
+      <created>1750160784646</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750160784646</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +194,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added gitIgnore" />
-    <option name="LAST_COMMIT_MESSAGE" value="added gitIgnore" />
+    <MESSAGE value="Inntialize ProjectWeb Structure" />
+    <MESSAGE value="Inntialize ProjectWeb Struture Test" />
+    <MESSAGE value="LoginAndRegisterLogic with Hashing" />
+    <MESSAGE value="Early Draft for homePage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Early Draft for homePage" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
