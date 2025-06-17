@@ -2,15 +2,17 @@ package models;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class AccountManager {
     Map<String,String> accounts;
-
+    Map<String, ArrayList<String>> friends;
 
     public AccountManager() {
         accounts = new HashMap<String,String>();
+        friends = new HashMap<String, ArrayList<String>>();
     }
 
     public boolean checkIfAccountExists(String account) {
@@ -32,6 +34,7 @@ public class AccountManager {
         }
         String hashedPass=hash(pass);
         accounts.put(accName, hashedPass);
+        friends.put(accName,new ArrayList<>());
     }
     private String hash(String password) {
         MessageDigest digest;
@@ -54,5 +57,26 @@ public class AccountManager {
         }
         return buff.toString();
     }
+    public void addFriend(String accName, String friendName) {
+        friends.get(accName).add(friendName);
+        friends.get(friendName).add(accName);
+    }
+    public void removeFriend(String accName, String friendName) {
+        friends.get(accName).remove(friendName);
+        friends.get(friendName).remove(accName);
+    }
+    public ArrayList<String> getPeople(String accName) {
+        ArrayList<String> result = new ArrayList<>();
+        for(String friend : accounts.keySet()){
+            if(friend.toLowerCase().startsWith(accName.toLowerCase())){
+                result.add(friend);
+            }
 
+        }
+
+        if(result.isEmpty()) {
+            return null;
+        }
+        else return result;
+    }
 }
