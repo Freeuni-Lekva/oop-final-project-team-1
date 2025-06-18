@@ -1,4 +1,5 @@
-<%--
+<%@ page import="models.AccountManager" %>
+<%@ page import="models.Messages" %><%--
   Created by IntelliJ IDEA.
   User: lukss
   Date: 6/17/2025
@@ -12,5 +13,38 @@
 </head>
 <body>
 
+<%
+   String type =  request.getParameter("messageType");
+
+    Messages ms = (Messages) session.getAttribute("messages");
+    if ("Friend Request".equals(type)) {
+        String from = request.getParameter("from");
+        String s = request.getParameter("message");
+        System.out.println(from);
+%>
+
+<h2>You Have A New Friend Suggestion From <%=from%></h2>
+
+<form action="HomePage.jsp" method="post" style="display:inline;">
+    <input type="hidden" name="from" value="<%=from%>"/>
+    <input type="hidden" name="message" value="<%=s%>"/>
+    <input type="hidden" name="action" value="accept"/>
+    <button type="submit">Accept</button>
+</form>
+
+
+<form action="HomePage.jsp" method="post" style="display:inline;">
+    <input type="hidden" name="from" value="<%=from%>"/>
+    <input type="hidden" name="message" value="<%=s%>"/>
+    <input type="hidden" name="action" value="reject"/>
+    <button type="submit">Reject</button>
+</form>
+
+
+
+<%
+
+    }
+%>
 </body>
 </html>

@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Messages {
-    Map<String, ArrayList<Message>> messages;
+    public Map<String, ArrayList<Message>> messages;
     public Messages() {
         messages = new HashMap<>();
         messages.put("luka", new ArrayList<>());
@@ -14,7 +14,11 @@ public class Messages {
         messages.get("gio").add(mes);
         Message mes2 = new Message("luka","gio","zdarova",true);
         messages.get("luka").add(mes2);
+
     }
+
+
+
     public void addMessage(Message mess) {
         if (!messages.containsKey(mess.to)) {
             messages.put(mess.to, new ArrayList<>());
@@ -30,10 +34,22 @@ public class Messages {
         }
         return new ArrayList<>();
     }
+    public boolean Compare(String from, String to, String message) {
+        boolean result = false;
+        if(messages.containsKey(to)) {
+            for(Message i : messages.get(to)){
+                if(i.from.equals(from) && i.message.equals(message)){
+                    result = true;
+                }
+            }
+        }
+        return result;
+
+    }
     public void removeMessage(Message mess) {
         messages.get(mess.to).remove(mess);
     }
-    public class Message {
+    public  static class Message {
         public String to;
         public String from;
         public String message;
