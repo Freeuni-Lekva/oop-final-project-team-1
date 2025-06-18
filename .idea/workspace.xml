@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="Early Draft for homePage">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Messages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/filteredUsers.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/try" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/AccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/AccountManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/WrongCredentials.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/WrongCredentials.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,30 +55,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.quiz-website [clean].executor": "Run",
-    "Maven.quiz-website [package].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Smart Tomcat.Tomcat: oop-final-project-team-1.executor": "Run",
-    "Smart Tomcat.Tomcat: quiz-website.executor": "Run",
-    "Tomcat Server.Tomcat 10.1.41.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ggulo/IdeaProjects/oop-final-project-team-1/src/main/webapp/jsp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15429688",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "terminal",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.quiz-website [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.quiz-website [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Smart Tomcat.Tomcat: oop-final-project-team-1.executor&quot;: &quot;Run&quot;,
+    &quot;Smart Tomcat.Tomcat: quiz-website.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.Tomcat 10.1.41.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ggulo/IdeaProjects/oop-final-project-team-1/src/main/webapp/jsp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15429688&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="models" />
@@ -121,9 +111,6 @@
       <option name="catalinaBase" value="C:\Users\lukss\.SmartTomcat\oop-final-project-team-1\quiz-website" />
       <option name="contextPath" value="/oop-final-project-team-1" />
       <option name="docBase" value="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1\src\main\webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -147,9 +134,6 @@
       <option name="catalinaBase" value="" />
       <option name="contextPath" value="/quiz-website" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp/jsp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -193,7 +177,8 @@
       <workItem from="1749903140161" duration="26000" />
       <workItem from="1749903175810" duration="4953000" />
       <workItem from="1750088678613" duration="10737000" />
-      <workItem from="1750162845760" duration="19685000" />
+      <workItem from="1750162845760" duration="20052000" />
+      <workItem from="1750219959423" duration="2306000" />
     </task>
     <task id="LOCAL-00001" summary="added gitIgnore">
       <option name="closed" value="true" />
@@ -235,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750160784646</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Early Draft for homePage">
+      <option name="closed" value="true" />
+      <created>1750183628823</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750183628823</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
