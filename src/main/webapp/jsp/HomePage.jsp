@@ -7,7 +7,7 @@
 <head>
   <title>HomePage</title>
 </head>
- <h1>User:  <%=request.getParameter("name") %>  </h1>
+ <h1>User:  <%=(String) session.getAttribute("userName")%>  </h1>
 <div style="display: flex; gap: 10px;">
     <button>Take a Quiz</button>
     <button>Create a Quiz</button>
@@ -16,12 +16,17 @@
     </a>
 
 </div>
+<%
+    session.setAttribute("User", request.getParameter("name") );
+%>
 <form action="filteredUsers.jsp" method="get">
     <input type="search" name="query" placeholder="Search..." />
     <button type="submit">Search</button>
 </form>
 
 <%
+    String curr = (String) session.getAttribute("userName");
+    AccountManager acc = (AccountManager) application.getAttribute("accountManager");
     String currentUser = (String) session.getAttribute("userName");
     Messages ms = (Messages) application.getAttribute("messages");
     ArrayList<Messages.Message> messages = ms.getMessages(currentUser);
@@ -33,14 +38,55 @@
     for(Messages.Message temp : messages) {
         String type="message";
         if(temp.friendReq)type="Friend Request";
+
 %>
 <div>
-    <a href="message.jsp?messageType=<%=type%>"><%=temp.from+" Sent you a "+type%> </a><br>
-
+    <a href="message.jsp?messageType=<%=type%>&from=<%=temp.from%>&message=<%=temp.message%>"><%=temp.from + " Sent you a " + type %>
+    </a><br>
 </div>
 <%
+
         }
+
     }
+    if("accept".equals(request.getParameter("action"))) {
+        acc.addFriend(curr, request.getParameter("from"));
+        Messages.Message m = new Messages.Message(request.getParameter("from"), "Program", curr + " Has Accepted Your Friend Request", false);
+        ms.addMessage(m);
+        String mes = request.getParameter("message");
+        ArrayList<Messages.Message> tmp = ms.getMessages(curr);
+        int removeIndex = -1;
+        for(int i = 0; i<ms.getMessages(curr).size(); i++){
+            if(tmp.get(i).from.equals(request.getParameter("from")) && tmp.get(i).message.equals(mes)){
+              removeIndex = i;
+              break;
+            }
+        }
+        tmp.remove(removeIndex);
+        ms.messages.put(curr,tmp);
+        response.sendRedirect("HomePage.jsp");
+
+    } else if ("reject".equals(request.getParameter("action"))) {
+        Messages.Message m = new Messages.Message(request.getParameter("from"), "Program", curr + " Has Rejected Your Friend Request", false);
+        ms.addMessage(m);
+        ArrayList<String> sent = (ArrayList<String>) session.getAttribute(request.getParameter("from")+"SendFriends");
+        sent.remove(curr);
+        session.setAttribute(request.getParameter("from")+"SendFriends",sent);
+        String mes = request.getParameter("message");
+        ArrayList<Messages.Message> tmp = ms.getMessages(curr);
+        int removeIndex = -1;
+        for(int i = 0; i<ms.getMessages(curr).size(); i++){
+            if(tmp.get(i).from.equals(request.getParameter("from")) && tmp.get(i).message.equals(mes)){
+                removeIndex = i;
+                break;
+            }
+        }
+        tmp.remove(removeIndex);
+        ms.messages.put(curr,tmp);
+        response.sendRedirect("HomePage.jsp");
+
+    }
+
 %>
 
 <h5>List Of Popular Quizzes: </h5>

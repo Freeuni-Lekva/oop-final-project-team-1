@@ -1,5 +1,6 @@
 <%@ page import="models.AccountManager" %>
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="models.Messages" %><%--
   Created by IntelliJ IDEA.
   User: lukss
   Date: 6/17/2025
@@ -12,6 +13,10 @@
     <title>Filtered Users</title>
 </head>
 <div style="display: flex; gap: 10px;">
+    <a href="HomePage.jsp" >
+        <button>Home</button>
+    </a>
+
     <button>Take a Quiz</button>
     <button>Create a Quiz</button>
     <a href="index.jsp">
@@ -23,20 +28,42 @@
 <h1>Search Result:</h1>
 <%
     AccountManager am = (AccountManager) application.getAttribute("accountManager");
-    ArrayList<String> people = am.getPeople(request.getParameter("query"));
+    String query = request.getParameter("query");
+    ArrayList<String> people = am.getPeople(query);
+    String newFriend = request.getParameter("friendName");
+    String CurrentUser = (String) session.getAttribute("userName");
+    ArrayList<String> sentFriends = (ArrayList<String>) session.getAttribute(CurrentUser+"SendFriends");
+    Messages ms = (Messages) application.getAttribute("messages");
+    if (sentFriends == null) {
+        sentFriends = new ArrayList<>();
+        session.setAttribute(CurrentUser+"SendFriends", sentFriends);
+    }else{
+        sentFriends.add(newFriend);
+       Messages.Message m = new Messages.Message(newFriend,CurrentUser,"You Have A New Friend Suggestion From "+CurrentUser+".",true);
+        ms.addMessage(m);
+    }
+
     if (people != null) {
         for (String p : people) {
+            if(!p.equals(CurrentUser)){
 %>
 <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
     <p style="margin: 0;"><%= p %></p>
-    <form action="AddFriendServlet" method="post" style="margin: 0;">
+    <% if (sentFriends.contains(p)) { %>
+    <span style="color: green;">Friend Request sent</span>
+    <% }else{%>
+    <form action="filteredUsers.jsp" method="get">
+        <input type="hidden" name="query" value="<%= query %>" />
         <input type="hidden" name="friendName" value="<%= p %>" />
         <button type="submit">Add Friend</button>
-    </form>
+    </form> <%
+    }%>
+
 </div>
 <%
+
     }
-} else {
+}} else {
 %>
 <p>No users found.</p>
 <%
