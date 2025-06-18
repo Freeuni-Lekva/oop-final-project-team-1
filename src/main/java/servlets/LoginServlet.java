@@ -19,6 +19,7 @@ public class LoginServlet extends HttpServlet {
         AccountManager accManager = (AccountManager) request.getServletContext().getAttribute("accountManager");
         if(accManager.isCorrectPas(request.getParameter("name"), request.getParameter("password"))){
             RequestDispatcher rd = getServletContext().getRequestDispatcher("/HomePage.jsp");
+
             HttpSession session = request.getSession();
             session.setAttribute("userName", request.getParameter("name"));
             rd.forward(request,response);
