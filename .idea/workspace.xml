@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="Early Draft for homePage">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +31,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Freeuni-Lekva/oop-final-project-team-1.git&quot;,
-    &quot;accountId&quot;: &quot;0c8176c7-5774-46b1-963b-512b7e943d6c&quot;
+    &quot;url&quot;: &quot;https://github.com/GIORGIKAVTARADZE/oop-final-project-team-1.git&quot;,
+    &quot;accountId&quot;: &quot;7ecb1c3d-f3aa-45ee-ad3a-9fc04befe6c2&quot;
   }
 }</component>
   <component name="LogFilters">
@@ -53,27 +53,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Smart Tomcat.Tomcat: oop-final-project-team-1.executor": "Run",
-    "Tomcat Server.Tomcat 10.1.41.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ggulo/IdeaProjects/oop-final-project-team-1/src/main/webapp/jsp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "terminal",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Smart Tomcat.Tomcat: oop-final-project-team-1.executor&quot;: &quot;Run&quot;,
+    &quot;Smart Tomcat.Tomcat: quiz-website.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.Tomcat 10.1.41.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ggulo/IdeaProjects/oop-final-project-team-1/src/main/webapp/jsp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="models" />
@@ -97,25 +98,42 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
-    <configuration name="Tomcat: oop-final-project-team-1" type="com.poratu.idea.plugins.tomcat">
+    <configuration name="Tomcat: quiz-website" type="com.poratu.idea.plugins.tomcat">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
       <predefined_log_file enabled="true" id="Tomcat Access Log" />
       <predefined_log_file id="Tomcat Catalina Log" />
       <predefined_log_file id="Tomcat Manager Log" />
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="catalinaBase" value="" />
-      <option name="contextPath" value="/oop-final-project-team-1" />
-      <option name="docBase" value="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1\src\main\webapp\jsp" />
+      <option name="contextPath" value="/quiz-website" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp/jsp" />
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
-          <option name="name" value="Apache Tomcat/10.1.41" />
-          <option name="path" value="$PROJECT_DIR$/../../../../apache-tomcat-10.1.41-windows-x64/apache-tomcat-10.1.41" />
-          <option name="version" value="10.1.41.0" />
+          <option name="name" value="Apache Tomcat/10.1.42" />
+          <option name="path" value="$USER_HOME$/Desktop/apache-tomcat-10.1.42" />
+          <option name="version" value="10.1.42.0" />
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
-      <module name="oop-final-project-team-1" />
+      <module name="quiz-website" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/10.1.41" />
+          <option name="path" value="$USER_HOME$/Desktop/apache-tomcat-10.1.41" />
+          <option name="version" value="10.1.41.0" />
+        </TomcatInfo>
+      </option>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -124,8 +142,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26094.121" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-IU-251.26094.121" />
       </set>
     </attachedChunks>
   </component>
@@ -145,6 +163,10 @@
       <workItem from="1749903140161" duration="26000" />
       <workItem from="1749903175810" duration="4953000" />
       <workItem from="1750088678613" duration="10737000" />
+      <workItem from="1750166700755" duration="2359000" />
+      <workItem from="1750254526029" duration="4000" />
+      <workItem from="1750254550621" duration="392000" />
+      <workItem from="1750254964582" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="added gitIgnore">
       <option name="closed" value="true" />
@@ -186,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750160784646</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Early Draft for homePage">
+      <option name="closed" value="true" />
+      <created>1750163116408</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750163116408</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
