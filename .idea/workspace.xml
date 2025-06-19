@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="Early Draft for homePage">
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/FriendReqServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/MessageLogicServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/FriendList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/TextArea.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/AccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/AccountManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/filteredUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/filteredUsers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -31,12 +39,12 @@
     &quot;assignee&quot;: &quot;GiorgiGuloiani&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Freeuni-Lekva/oop-final-project-team-1.git&quot;,
-    &quot;accountId&quot;: &quot;0c8176c7-5774-46b1-963b-512b7e943d6c&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Freeuni-Lekva/oop-final-project-team-1.git",
+    "accountId": "3cb4c241-8ba5-4d42-8f8b-e6ad2dedd3a9"
   }
-}</component>
+}]]></component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -92,16 +100,7 @@
       <recent name="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Smart Tomcat.Tomcat: quiz-website">
     <configuration name="Tomcat: oop-final-project-team-1" type="com.poratu.idea.plugins.tomcat">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
       <predefined_log_file enabled="true" id="Tomcat Access Log" />
@@ -111,9 +110,6 @@
       <option name="catalinaBase" value="" />
       <option name="contextPath" value="/oop-final-project-team-1" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp/jsp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -123,7 +119,32 @@
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
-      <module name="oop-final-project-team-1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat: quiz-website" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="" />
+      <option name="contextPath" value="/quiz-website" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp/jsp" />
+      <option name="envOptions">
+        <map />
+      </option>
+      <option name="extraClassPath" value="" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/10.1.41" />
+          <option name="path" value="$PROJECT_DIR$/../../../../Giorgi/apache-tomcat-10.1.41" />
+          <option name="version" value="10.1.41.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="quiz-website" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -132,8 +153,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
       </set>
     </attachedChunks>
   </component>
@@ -154,6 +175,7 @@
       <workItem from="1749903175810" duration="4953000" />
       <workItem from="1750088678613" duration="10737000" />
       <workItem from="1750162845760" duration="19685000" />
+      <workItem from="1750353248776" duration="13168000" />
     </task>
     <task id="LOCAL-00001" summary="added gitIgnore">
       <option name="closed" value="true" />
