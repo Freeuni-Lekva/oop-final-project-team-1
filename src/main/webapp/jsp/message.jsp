@@ -25,7 +25,7 @@
 
 <h2>You Have A New Friend Suggestion From <%=from%></h2>
 
-<form action="HomePage.jsp" method="post" style="display:inline;">
+<form action="friend" method="post" style="display:inline;">
     <input type="hidden" name="from" value="<%=from%>"/>
     <input type="hidden" name="message" value="<%=s%>"/>
     <input type="hidden" name="action" value="accept"/>
@@ -33,7 +33,7 @@
 </form>
 
 
-<form action="HomePage.jsp" method="post" style="display:inline;">
+<form action="friend" method="post" style="display:inline;">
     <input type="hidden" name="from" value="<%=from%>"/>
     <input type="hidden" name="message" value="<%=s%>"/>
     <input type="hidden" name="action" value="reject"/>
@@ -43,7 +43,25 @@
 
 
 <%
+} else {
+%>
 
+<p style="margin: 0;">Message from <strong><%= request.getParameter("from") %></strong>:</p>
+<p><%= request.getParameter("message") %></p>
+<form action="TextArea.jsp" method="get" style="display:inline;">
+    <input type="hidden" name="from" value="<%=request.getParameter("from")%>"/>
+    <input type="hidden" name="action" value="Reply"/>
+    <input type="hidden" name="message" value="<%=request.getParameter("message")%>"/>
+    <button type="submit">Reply</button>
+</form>
+<form action="textMessage" method="post" style="display:inline;">
+    <input type="hidden" name="from" value="<%=request.getParameter("from")%>"/>
+    <input type="hidden" name="message" value="<%=request.getParameter("message")%>"/>
+    <input type="hidden" name="action" value="Delete"/>
+    <button type="submit">Delete</button>
+</form>
+
+<%
     }
 %>
 </body>
