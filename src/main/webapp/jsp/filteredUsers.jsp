@@ -34,10 +34,12 @@
     String CurrentUser = (String) session.getAttribute("userName");
     ArrayList<String> sentFriends = (ArrayList<String>) session.getAttribute(CurrentUser+"SendFriends");
     Messages ms = (Messages) application.getAttribute("messages");
+
     if (sentFriends == null) {
         sentFriends = new ArrayList<>();
         session.setAttribute(CurrentUser+"SendFriends", sentFriends);
-    }else{
+    }
+    else {
         sentFriends.add(newFriend);
        Messages.Message m = new Messages.Message(newFriend,CurrentUser,"You Have A New Friend Suggestion From "+CurrentUser+".",true);
         ms.addMessage(m);
@@ -51,7 +53,29 @@
     <p style="margin: 0;"><%= p %></p>
     <% if (sentFriends.contains(p)) { %>
     <span style="color: green;">Friend Request sent</span>
-    <% }else{%>
+    <% }else if(am.isFriend(CurrentUser,p)){%>
+    <span style="color: green;">Friends</span>
+    <% }else if((session.getAttribute(p + "SendFriends" )!=null&&((ArrayList<String>)session.getAttribute(p + "SendFriends" )).contains(CurrentUser))){
+    %>
+    <form action="friend" method="post" style="display:inline;">
+        <input type="hidden" name="from" value="<%=p%>"/>
+        <input type="hidden" name="message" value="<%="You Have A New Friend Suggestion From "+p+"."%>"/>
+        <input type="hidden" name="action" value="accept"/>
+        <input type="hidden" name="from" value="filteredUser"/>
+        <button type="submit">Accept</button>
+    </form>
+
+
+    <form action="friend" method="post" style="display:inline;">
+        <input type="hidden" name="from" value="<%=p%>"/>
+        <input type="hidden" name="message" value="<%="You Have A New Friend Suggestion From "+p+"."%>"/>
+        <input type="hidden" name="action" value="reject"/>
+        <input type="hidden" name="from" value="filteredUser"/>
+        <button type="submit">Reject</button>
+    </form>
+    <%
+    }
+    else {%>
     <form action="filteredUsers.jsp" method="get">
         <input type="hidden" name="query" value="<%= query %>" />
         <input type="hidden" name="friendName" value="<%= p %>" />

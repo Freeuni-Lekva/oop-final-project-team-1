@@ -14,6 +14,9 @@
     <a href="index.jsp">
         <button>Logout</button>
     </a>
+    <a href="FriendList.jsp">
+        <button>Friends</button>
+    </a>
 
 </div>
 <%
@@ -49,44 +52,7 @@
         }
 
     }
-    if("accept".equals(request.getParameter("action"))) {
-        acc.addFriend(curr, request.getParameter("from"));
-        acc.addFriend(request.getParameter("from"),curr);
-        Messages.Message m = new Messages.Message(request.getParameter("from"), "Program", curr + " Has Accepted Your Friend Request", false);
-        ms.addMessage(m);
-        String mes = request.getParameter("message");
-        ArrayList<Messages.Message> tmp = ms.getMessages(curr);
-        int removeIndex = -1;
-        for(int i = 0; i<ms.getMessages(curr).size(); i++){
-            if(tmp.get(i).from.equals(request.getParameter("from")) && tmp.get(i).message.equals(mes)){
-              removeIndex = i;
-              break;
-            }
-        }
-        tmp.remove(removeIndex);
-        ms.messages.put(curr,tmp);
-        response.sendRedirect("HomePage.jsp");
 
-    } else if ("reject".equals(request.getParameter("action"))) {
-        Messages.Message m = new Messages.Message(request.getParameter("from"), "Program", curr + " Has Rejected Your Friend Request", false);
-        ms.addMessage(m);
-        ArrayList<String> sent = (ArrayList<String>) session.getAttribute(request.getParameter("from")+"SendFriends");
-        sent.remove(curr);
-        session.setAttribute(request.getParameter("from")+"SendFriends",sent);
-        String mes = request.getParameter("message");
-        ArrayList<Messages.Message> tmp = ms.getMessages(curr);
-        int removeIndex = -1;
-        for(int i = 0; i<ms.getMessages(curr).size(); i++){
-            if(tmp.get(i).from.equals(request.getParameter("from")) && tmp.get(i).message.equals(mes)){
-                removeIndex = i;
-                break;
-            }
-        }
-        tmp.remove(removeIndex);
-        ms.messages.put(curr,tmp);
-        response.sendRedirect("HomePage.jsp");
-
-    }
 
 %>
 
