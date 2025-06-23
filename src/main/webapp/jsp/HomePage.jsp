@@ -51,6 +51,7 @@
     }
     if("accept".equals(request.getParameter("action"))) {
         acc.addFriend(curr, request.getParameter("from"));
+        acc.addFriend(request.getParameter("from"),curr);
         Messages.Message m = new Messages.Message(request.getParameter("from"), "Program", curr + " Has Accepted Your Friend Request", false);
         ms.addMessage(m);
         String mes = request.getParameter("message");
