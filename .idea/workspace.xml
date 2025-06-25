@@ -9,28 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="Early Draft for homePage">
-      <change afterPath="$PROJECT_DIR$/QuizDataBase.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/QuizDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/FillInBlank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/MyDataBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Option.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/PictureResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/QuestionResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Questions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Quiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/QuizzesMainPageServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/Quizzes.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/FriendReqServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/FriendReqServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/MessageLogicServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/MessageLogicServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="quizDao and database" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -188,7 +167,7 @@
       <workItem from="1750162845760" duration="19685000" />
       <workItem from="1750694421480" duration="8059000" />
       <workItem from="1750770456054" duration="6698000" />
-      <workItem from="1750786712652" duration="4588000" />
+      <workItem from="1750786712652" duration="4911000" />
     </task>
     <task id="LOCAL-00001" summary="added gitIgnore">
       <option name="closed" value="true" />
@@ -246,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750278057505</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="quizDao and database">
+      <option name="closed" value="true" />
+      <created>1750791567303</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1750791567304</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +245,8 @@
     <MESSAGE value="Inntialize ProjectWeb Struture Test" />
     <MESSAGE value="LoginAndRegisterLogic with Hashing" />
     <MESSAGE value="Early Draft for homePage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Early Draft for homePage" />
+    <MESSAGE value="quizDao and database" />
+    <option name="LAST_COMMIT_MESSAGE" value="quizDao and database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
