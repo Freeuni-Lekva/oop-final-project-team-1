@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="oop-final-project-team-1:war" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="Early Draft for homePage">
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/FriendReqServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/MessageLogicServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/FriendList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/TextArea.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/AccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/AccountManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/filteredUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/filteredUsers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="quizDao and database" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,12 +33,12 @@
     &quot;assignee&quot;: &quot;GiorgiGuloiani&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Freeuni-Lekva/oop-final-project-team-1.git",
-    "accountId": "3cb4c241-8ba5-4d42-8f8b-e6ad2dedd3a9"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Freeuni-Lekva/oop-final-project-team-1.git&quot;,
+    &quot;accountId&quot;: &quot;0c8176c7-5774-46b1-963b-512b7e943d6c&quot;
   }
-}]]></component>
+}</component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -72,6 +66,7 @@
     &quot;Smart Tomcat.Tomcat: oop-final-project-team-1.executor&quot;: &quot;Run&quot;,
     &quot;Smart Tomcat.Tomcat: quiz-website.executor&quot;: &quot;Run&quot;,
     &quot;Tomcat Server.Tomcat 10.1.41.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.index.jsp.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/ggulo/IdeaProjects/oop-final-project-team-1/src/main/webapp/jsp&quot;,
@@ -80,11 +75,16 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15429688&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -92,15 +92,27 @@
       <recent name="models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1\src\main\webapp\jsp" />
       <recent name="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1" />
+      <recent name="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1\src\main\webapp\jsp" />
       <recent name="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1\.idea" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="models" />
+    </key>
   </component>
-  <component name="RunManager" selected="Smart Tomcat.Tomcat: quiz-website">
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
     <configuration name="Tomcat: oop-final-project-team-1" type="com.poratu.idea.plugins.tomcat">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
       <predefined_log_file enabled="true" id="Tomcat Access Log" />
@@ -110,6 +122,9 @@
       <option name="catalinaBase" value="" />
       <option name="contextPath" value="/oop-final-project-team-1" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp/jsp" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -119,32 +134,7 @@
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat: quiz-website" type="com.poratu.idea.plugins.tomcat">
-      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
-      <predefined_log_file enabled="true" id="Tomcat Access Log" />
-      <predefined_log_file id="Tomcat Catalina Log" />
-      <predefined_log_file id="Tomcat Manager Log" />
-      <predefined_log_file id="Tomcat Host Manager Log" />
-      <option name="catalinaBase" value="" />
-      <option name="contextPath" value="/quiz-website" />
-      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp/jsp" />
-      <option name="envOptions">
-        <map />
-      </option>
-      <option name="extraClassPath" value="" />
-      <option name="tomcatInfo">
-        <TomcatInfo>
-          <option name="name" value="Apache Tomcat/10.1.41" />
-          <option name="path" value="$PROJECT_DIR$/../../../../Giorgi/apache-tomcat-10.1.41" />
-          <option name="version" value="10.1.41.0" />
-        </TomcatInfo>
-      </option>
-      <option name="vmOptions" value="" />
-      <module name="quiz-website" />
+      <module name="oop-final-project-team-1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -153,8 +143,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
       </set>
     </attachedChunks>
   </component>
@@ -175,7 +165,9 @@
       <workItem from="1749903175810" duration="4953000" />
       <workItem from="1750088678613" duration="10737000" />
       <workItem from="1750162845760" duration="19685000" />
-      <workItem from="1750353248776" duration="13168000" />
+      <workItem from="1750694421480" duration="8059000" />
+      <workItem from="1750770456054" duration="6698000" />
+      <workItem from="1750786712652" duration="4911000" />
     </task>
     <task id="LOCAL-00001" summary="added gitIgnore">
       <option name="closed" value="true" />
@@ -225,7 +217,23 @@
       <option name="project" value="LOCAL" />
       <updated>1750196727982</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Early Draft for homePage">
+      <option name="closed" value="true" />
+      <created>1750278057505</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1750278057505</updated>
+    </task>
+    <task id="LOCAL-00008" summary="quizDao and database">
+      <option name="closed" value="true" />
+      <created>1750791567303</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1750791567304</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +245,8 @@
     <MESSAGE value="Inntialize ProjectWeb Struture Test" />
     <MESSAGE value="LoginAndRegisterLogic with Hashing" />
     <MESSAGE value="Early Draft for homePage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Early Draft for homePage" />
+    <MESSAGE value="quizDao and database" />
+    <option name="LAST_COMMIT_MESSAGE" value="quizDao and database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

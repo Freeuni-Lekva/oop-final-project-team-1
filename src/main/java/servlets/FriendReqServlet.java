@@ -22,50 +22,33 @@ public class FriendReqServlet extends HttpServlet {
         Messages ms = (Messages) request.getServletContext().getAttribute("messages");
         String curr = (String) request.getSession().getAttribute("userName");
 
-        if("accept".equals(request.getParameter("action"))) {
+        if ("accept".equals(request.getParameter("action"))) {
             acc.addFriend(curr, request.getParameter("from"));
-            Messages.Message m = new Messages.Message(request.getParameter("from"), "Program", curr + " Has Accepted Your Friend Request", false);
-            ms.addMessage(m);
-            String mes = request.getParameter("message");
-            ArrayList<Messages.Message> tmp = ms.getMessages(curr);
-            int removeIndex = -1;
-            for(int i = 0; i<ms.getMessages(curr).size(); i++){
-                if(tmp.get(i).from.equals(request.getParameter("from")) && tmp.get(i).message.equals(mes)){
-                    removeIndex = i;
-                    break;
-                }
-            }
-            tmp.remove(removeIndex);
-            ms.messages.put(curr,tmp);
-            ArrayList<String> sent = (ArrayList<String>) request.getSession().getAttribute(request.getParameter("from")+"SendFriends");
-            sent.remove(curr);
-            request.getSession().setAttribute(request.getParameter("from")+"SendFriends",sent);
-            RequestDispatcher rd = getServletContext().getRequestDispatcher("/HomePage.jsp");;
-            if(request.getParameter("from").equals("filteredUser")) rd = getServletContext().getRequestDispatcher("/filteredUser.jsp");
-            rd.forward(request, response);
-        } else if ("reject".equals(request.getParameter("action"))) {
-            Messages.Message m = new Messages.Message(request.getParameter("from"), "Program", curr + " Has Rejected Your Friend Request", false);
-            ms.addMessage(m);
-            ArrayList<String> sent = (ArrayList<String>) request.getSession().getAttribute(request.getParameter("from")+"SendFriends");
-            sent.remove(curr);
-            request.getSession().setAttribute(request.getParameter("from")+"SendFriends",sent);
-            String mes = request.getParameter("message");
-            ArrayList<Messages.Message> tmp = ms.getMessages(curr);
-            int removeIndex = -1;
-            for(int i = 0; i<ms.getMessages(curr).size(); i++){
-                if(tmp.get(i).from.equals(request.getParameter("from")) && tmp.get(i).message.equals(mes)){
-                    removeIndex = i;
-                    break;
-                }
-            }
-            tmp.remove(removeIndex);
-            ms.messages.put(curr,tmp);
-            RequestDispatcher rd = getServletContext().getRequestDispatcher("/HomePage.jsp");;
-            if(request.getParameter("from").equals("filteredUser")) rd = getServletContext().getRequestDispatcher("/filteredUser.jsp");
-            rd.forward(request, response);
 
+            Messages.Message m = new Messages.Message(request.getParameter("from"), "System", curr + " Has Accepted Your Friend Request", false);
+            ms.addMessage(m);
+            String mes = request.getParameter("message");
+            ArrayList<Messages.Message> tmp = ms.getMessages(curr);
+            int removeIndex = -1;
+            for (int i = 0; i < ms.getMessages(curr).size(); i++) {
+                if (tmp.get(i).from.equals(request.getParameter("from")) && tmp.get(i).message.equals(mes)) {
+                    removeIndex = i;
+                    break;
+                }
+            }
+            tmp.remove(removeIndex);
+            ms.messages.put(curr, tmp);
+            ArrayList<String> sent = (ArrayList<String>) request.getSession().getAttribute(request.getParameter("from") + "SendFriends");
+            sent.remove(curr);
+            request.getSession().setAttribute(request.getParameter("from") + "SendFriends", sent);
+            RequestDispatcher rd = getServletContext().getRequestDispatcher("/HomePage.jsp");
+            ;
+            if (request.getParameter("from").equals("filteredUser"))
+                rd = getServletContext().getRequestDispatcher("/filteredUser.jsp");
+            rd.forward(request, response);
         }
-        }
+    }
+
 
     }
 
