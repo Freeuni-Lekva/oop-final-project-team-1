@@ -73,6 +73,3 @@ CREATE TABLE Score (
                        attemptTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                        FOREIGN KEY (quizId) REFERENCES Quiz(quizId)
 );
-
-
-

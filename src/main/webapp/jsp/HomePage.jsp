@@ -12,7 +12,9 @@
     <a href="Quizzes">
     <button>Quizzes</button>
     </a>
+    <a href="createQuiz.jsp">
     <button>Create a Quiz</button>
+    </a>
     <a href="index.jsp">
         <button>Logout</button>
     </a>
