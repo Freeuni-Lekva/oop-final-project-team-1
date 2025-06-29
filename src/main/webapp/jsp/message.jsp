@@ -34,7 +34,7 @@
 
 
 <form action="HomePage.jsp" method="post" style="display:inline;">
-    <input type="hidden" name="from" value="<%=from%>"/>
+    <input type="hidden" name="from" value="<%=from%>"/>g
     <input type="hidden" name="message" value="<%=s%>"/>
     <input type="hidden" name="action" value="reject"/>
     <button type="submit">Reject</button>
