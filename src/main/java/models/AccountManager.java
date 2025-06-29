@@ -79,4 +79,11 @@ public class AccountManager {
         }
         else return result;
     }
+    public boolean isFriend(String me, String friend){
+        return friends.get(friend).contains(me);
+    }
+    public ArrayList<String> getFriends(String accName){
+        return friends.get(accName);
+    }
+
 }

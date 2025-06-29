@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="quiz-website:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="Merge remote-tracking branch 'upstream/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+=======
+    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/CreateQuizServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/TakeQuizServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/addingQuestionsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/addingQuestions.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/createQuiz.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/takingQuiz.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuizDataBase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/QuizDataBase.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/QuizDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/QuizDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/MyDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/MyDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Quiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/QuizzesMainPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/QuizzesMainPageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/Quizzes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/Quizzes.jsp" afterDir="false" />
+    </list>
+>>>>>>> upstream/master
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,6 +85,7 @@
     &quot;Smart Tomcat.Tomcat: oop-final-project-team-1.executor&quot;: &quot;Run&quot;,
     &quot;Smart Tomcat.Tomcat: quiz-website.executor&quot;: &quot;Run&quot;,
     &quot;Tomcat Server.Tomcat 10.1.41.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.message.jsp.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/ggulo/IdeaProjects/oop-final-project-team-1/src/main/webapp/jsp&quot;,
@@ -180,9 +205,13 @@
       <workItem from="1749903175810" duration="4953000" />
       <workItem from="1750088678613" duration="10737000" />
       <workItem from="1750162845760" duration="20052000" />
+<<<<<<< HEAD
       <workItem from="1750219959423" duration="2306000" />
       <workItem from="1750664864491" duration="26000" />
       <workItem from="1751194304785" duration="585000" />
+=======
+      <workItem from="1750219959423" duration="4372000" />
+>>>>>>> upstream/master
     </task>
     <task id="LOCAL-00001" summary="added gitIgnore">
       <option name="closed" value="true" />
@@ -232,6 +261,7 @@
       <option name="project" value="LOCAL" />
       <updated>1750183628823</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00007" summary="Merge remote-tracking branch 'upstream/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <option name="closed" value="true" />
       <created>1750276100014</created>
@@ -265,6 +295,33 @@
       <updated>1751194862349</updated>
     </task>
     <option name="localTasksCounter" value="11" />
+=======
+    <task id="LOCAL-00007" summary="Early Draft for homePage">
+      <option name="closed" value="true" />
+      <created>1750240267519</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1750240267519</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Merge branch 'master' of https://github.com/Freeuni-Lekva/oop-final-project-team-1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1750873621191</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1750873621191</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Merge branch 'master' of https://github.com/Freeuni-Lekva/oop-final-project-team-1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1750874513347</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1750874513347</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+>>>>>>> upstream/master
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
