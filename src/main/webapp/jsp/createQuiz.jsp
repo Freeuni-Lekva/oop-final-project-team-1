@@ -10,16 +10,21 @@
     <label for="quizTitle">Quiz Title:</label><br>
     <input type="text" id="quizTitle" name="quizTitle" required><br><br>
 
-    <label for="numQuestions">Number of Questions:</label><br>
-    <input type="number" id="numQuestions" name="numQuestions" min="1" required><br><br>
+    <label for="numResponseQuestions">Number of Response Questions:</label><br>
+    <input type="number" id="numResponseQuestions" name="numResponseQuestions" min="0" required><br><br>
 
-    <label for="quizType">Select Quiz Type:</label><br>
-    <select id="quizType" name="quizType" required>
-        <option value="response">Short Response</option>
-        <option value="fill">Fill in the Blank</option>
-        <option value="mcq">Multiple Choice</option>
-        <option value="picture">Picture Response</option>
-    </select><br><br>
+    <label for="numFillQuestions">Number of Fill In Questions:</label><br>
+    <input type="number" id="numFillQuestions" name="numFillQuestions" min="0" required><br><br>
+
+    <label for="numPictureQuestions">Number of Picture Questions:</label><br>
+    <input type="number" id="numPictureQuestions" name="numPictureQuestions" min="0" required><br><br>
+
+    <label for="numMcQuestions">Number of MC Questions:</label><br>
+    <input type="number" id="numMcQuestions" name="numMcQuestions" min="0" required><br><br>
+
+    <label>Should questions appear in random order?</label><br>
+    <input type="radio" name="isRandom" value="true" required> Yes<br>
+    <input type="radio" name="isRandom" value="false"> No<br>
 
     <input type="submit" value="Create Quiz">
 </form>

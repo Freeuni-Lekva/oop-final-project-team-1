@@ -7,7 +7,7 @@
 <body>
 <h1>  The Name <%=request.getParameter("name")%> is already in use </h1>
 <p>Please enter another name and password</p>
-<form action="AccountServlet" method="post">
+<form action="RegisterServlet" method="post">
   User Name: <input type="text" name="name"/> <br/>
   Password: <input type="password" name="password"/>
     <input type="submit" value="Login"/>

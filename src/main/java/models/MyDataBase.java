@@ -8,7 +8,7 @@ public class MyDataBase {
     private static Connection dbConnection;
     static{
         try {
-                dbConnection = DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz_system","root","Luka2004#");
+                dbConnection = DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz_system","root","Xruxunebi150.");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

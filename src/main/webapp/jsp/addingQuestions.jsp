@@ -7,21 +7,26 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    int quizId = Integer.parseInt(request.getParameter("quizId"));
-    String quizType = request.getParameter("type");
-    int numQuestions = Integer.parseInt(request.getParameter("num"));
+    int quizId = (Integer) request.getAttribute("quizId");
+    int numResponseQuestions = Integer.parseInt(request.getParameter("numResponseQuestions"));
+    int numFillQuestions = Integer.parseInt(request.getParameter("numFillQuestions"));
+    int numPictureQuestions = Integer.parseInt(request.getParameter("numPictureQuestions"));
+    int numMCQuestions = Integer.parseInt(request.getParameter("numMcQuestions"));
+    int numQuestions = numFillQuestions+numMCQuestions+numPictureQuestions+numResponseQuestions;
 %>
 <html>
 <head>
     <title>Add Questions</title>
 </head>
 <body>
-<h2>Add <%= numQuestions %> Questions for Quiz (Type: <%= quizType %>)</h2>
+<h2>Add <%= numQuestions %> Questions for Quiz  <%= request.getParameter("quizTitle") %></h2>
 
 <form action="addingQuestionsServlet" method="post">
     <input type="hidden" name="quizId" value="<%= quizId %>">
-    <input type="hidden" name="quizType" value="<%= quizType %>">
-    <input type="hidden" name="numQuestions" value="<%= numQuestions %>">
+    <input type="hidden" name="numFillQuestions" value="<%= numFillQuestions %>">
+    <input type="hidden" name="numPictureQuestions" value="<%= numPictureQuestions %>">
+    <input type="hidden" name="numResponseQuestions" value="<%= numResponseQuestions %>">
+    <input type="hidden" name="numMCQuestions" value="<%= numMCQuestions %>">
 
     <%
         for (int i = 1; i <= numQuestions; i++) {
@@ -30,21 +35,25 @@
         <legend>Question <%= i %></legend>
         <label>Question Text:</label><br>
         <textarea name="questionText<%= i %>" rows="2" cols="50" required></textarea><br><br>
-
-        <% if (quizType.equals("response") || quizType.equals("fill")) { %>
+        <% if (i-1<numFillQuestions) { %>
+        <label>“To mark the blank in your question, use [[blank]]. You can place it anywhere in the sentence.”</label><br>
         <label>Correct Answer:</label><br>
         <input type="text" name="correctAnswer<%= i %>" required><br>
-        <% } else if (quizType.equals("picture")) { %>
+        <% } else if (i-1<numFillQuestions+numPictureQuestions) { %>
         <label>Image URL:</label><br>
         <input type="text" name="imageUrl<%= i %>" required><br>
         <label>Correct Answer:</label><br>
         <input type="text" name="correctAnswer<%= i %>" required><br>
-        <% } else if (quizType.equals("mcq")) { %>
+        <% } else if (i-1<numResponseQuestions+numFillQuestions+numPictureQuestions) { %>
+        <label>Correct Answer:</label><br>
+        <input type="text" name="correctAnswer<%= i %>" required><br>
+
+        <% }else  { %>
         <label>Option 1:</label><input type="text" name="option1_<%= i %>" required><br>
         <label>Option 2:</label><input type="text" name="option2_<%= i %>" required><br>
         <label>Option 3:</label><input type="text" name="option3_<%= i %>" required><br>
         <label>Option 4:</label><input type="text" name="option4_<%= i %>" required><br>
-        <label>Correct Option (1-4):</label><input type="number" name="correctOption<%= i %>" min="1" max="4" required><br>
+        <label>Correct Option (1-4):</label><input type="number" name="correctAnswer<%= i %>" min="1" max="4" required><br>
         <% } %>
     </fieldset>
     <br>
