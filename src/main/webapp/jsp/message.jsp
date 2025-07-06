@@ -23,7 +23,7 @@
         System.out.println(from);
 %>
 
-<h2>You Have A New Friend Suggestion From <%=from%></h2>
+<h2>You Have A New Friend Request From <%=from%></h2>
 
 <form action="friend" method="post" style="display:inline;">
     <input type="hidden" name="from" value="<%=from%>"/>
@@ -33,8 +33,13 @@
 </form>
 
 
+<<<<<<< HEAD
+<form action="HomePage.jsp" method="post" style="display:inline;">
+    <input type="hidden" name="from" value="<%=from%>"/>g
+=======
 <form action="friend" method="post" style="display:inline;">
     <input type="hidden" name="from" value="<%=from%>"/>
+>>>>>>> upstream/master
     <input type="hidden" name="message" value="<%=s%>"/>
     <input type="hidden" name="action" value="reject"/>
     <button type="submit">Reject</button>

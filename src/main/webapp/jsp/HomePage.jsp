@@ -9,8 +9,12 @@
 </head>
  <h1>User:  <%=(String) session.getAttribute("userName")%>  </h1>
 <div style="display: flex; gap: 10px;">
-    <button>Take a Quiz</button>
+    <a href="Quizzes">
+    <button>Quizzes</button>
+    </a>
+    <a href="createQuiz.jsp">
     <button>Create a Quiz</button>
+    </a>
     <a href="index.jsp">
         <button>Logout</button>
     </a>
@@ -56,19 +60,6 @@
 
 %>
 
-<h5>List Of Popular Quizzes: </h5>
-<ul>
-
-</ul>
-<h5>List Of recently created Quizzes</h5>
-<ul>
-
-</ul>
-<h5>Recently Taken Quizzes: </h5>
-<h5>Available Quizzes: </h5>
-
-<ul>
-</ul>
 
 <body>
 <br/>

@@ -24,27 +24,9 @@ public class MessageLogicServlet extends HttpServlet {
 
 
         if(request.getParameter("action")!=null && request.getParameter("action").equals("Delete")) {
-            ArrayList<Messages.Message> userMessages = me.getMessages(curr);
-            Messages.Message deletedMessage = new Messages.Message(curr,request.getParameter("from"),request.getParameter("message"),false);
-            int removeIndex = -1;
-            for(int i = 0; i<userMessages.size(); i++){
-                if(userMessages.get(i).from.equals(deletedMessage.from) && userMessages.get(i).message.equals(deletedMessage.message)){
-                    removeIndex = i;
-                    break;
-                }
-            }
-            userMessages.remove(removeIndex);
+            respondToAction(request, curr, me);
         }else if(request.getParameter("action")!=null && request.getParameter("action").equals("Reply")){
-            ArrayList<Messages.Message> userMessages = me.getMessages(curr);
-            Messages.Message deletedMessage = new Messages.Message(curr,request.getParameter("from"),request.getParameter("message"),false);
-            int removeIndex = -1;
-            for(int i = 0; i<userMessages.size(); i++){
-                if(userMessages.get(i).from.equals(deletedMessage.from) && userMessages.get(i).message.equals(deletedMessage.message)){
-                    removeIndex = i;
-                    break;
-                }
-            }
-            userMessages.remove(removeIndex);
+            respondToAction(request, curr, me);
             me.addMessage(tmp);
         }else{
             me.addMessage(tmp);
@@ -57,6 +39,19 @@ public class MessageLogicServlet extends HttpServlet {
             rd.forward(request,response);
         }
 
+    private void respondToAction(HttpServletRequest request, String curr, Messages me) {
+        ArrayList<Messages.Message> userMessages = me.getMessages(curr);
+        Messages.Message deletedMessage = new Messages.Message(curr,request.getParameter("from"),request.getParameter("message"),false);
+        int removeIndex = -1;
+        for(int i = 0; i<userMessages.size(); i++){
+            if(userMessages.get(i).from.equals(deletedMessage.from) && userMessages.get(i).message.equals(deletedMessage.message)){
+                removeIndex = i;
+                break;
+            }
+        }
+        userMessages.remove(removeIndex);
     }
+
+}
 
 
