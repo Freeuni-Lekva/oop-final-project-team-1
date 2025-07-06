@@ -15,6 +15,7 @@ import models.Questions;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @WebServlet("/TakeQuizServlet")
@@ -26,13 +27,17 @@ public class TakeQuizServlet extends HttpServlet {
 
         try {
             List<Questions> questions = quizDAO.getQuestionsForQuiz(quizId);
-            request.setAttribute("questions", questions);
-            request.setAttribute("quizId", quizId);
+            HttpSession session = request.getSession();
+            session.setAttribute("questions", questions);
+            session.setAttribute("quizId", quizId);
+            request.setAttribute("index", 0);
+            if(quizDAO.isRandom(quizId)) Collections.shuffle(questions);
             RequestDispatcher dispatcher = request.getRequestDispatcher("takingQuiz.jsp");
             dispatcher.forward(request, response);
         } catch (SQLException e) {
             throw new ServletException("Error loading quiz", e);
         }
     }
+
 }
 

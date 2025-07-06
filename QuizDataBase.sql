@@ -16,7 +16,8 @@ CREATE TABLE Quiz (
                       title           VARCHAR(200) NOT NULL,
                       creatorUsername VARCHAR(40),
                       timeLimitSec    INT,
-                      timesTaken      INT DEFAULT 0
+                      timesTaken      INT DEFAULT 0,
+                    randomQuiz        BOOLEAN
 );
 
 
@@ -62,7 +63,6 @@ CREATE TABLE MultipleChoiceOption (
                             isCorrect BOOLEAN NOT NULL,
                             FOREIGN KEY (questionId) REFERENCES MultipleChoiceQuestion(questionId)
 );
-
 
 
 CREATE TABLE Score (

@@ -18,19 +18,23 @@ import java.util.ArrayList;
 
 @WebServlet("/CreateQuizServlet")
 public class CreateQuizServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String title = request.getParameter("quizTitle");
-        int numQuestions = Integer.parseInt(request.getParameter("numQuestions"));
-        String quizType = request.getParameter("quizType");
+
         String username = (String) request.getSession().getAttribute("userName");
         QuizDAO quizDAO = (QuizDAO) getServletContext().getAttribute("quizDAO");
+
         int quizId = 0;
         try {
-            quizId = quizDAO.insertQuiz(title, username, 0);
+
+            quizId = quizDAO.insertQuiz(title, username, 0,Boolean.parseBoolean(request.getParameter("isRandom")));
+            request.setAttribute("quizId", quizId);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        response.sendRedirect("addingQuestions.jsp?quizId=" + quizId + "&type=" + quizType + "&num=" + numQuestions);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("addingQuestions.jsp");
+        requestDispatcher.forward(request,response);
+
 
     }
 }
