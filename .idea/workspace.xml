@@ -4,37 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/AdminDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Announcement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/MessagesDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/AdminControlPanelServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/SubmitQuizServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/Score.jsp" afterDir="false" />
+    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="I updated system so information is stored in database and made Admin draft">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizDataBase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/QuizDataBase.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/QuizDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/QuizDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/AccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/AccountManagerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/FillInBlank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/FillInBlank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Messages.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/MultipleChoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/MultipleChoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/MyDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/MyDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Option.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Option.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/PictureResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/PictureResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/QuestionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/QuestionResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Questions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/CreateQuizServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/CreateQuizServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/FriendReqServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/FriendReqServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/MessageLogicServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/MessageLogicServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/TakeQuizServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/TakeQuizServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/FriendList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/FriendList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/filteredUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/filteredUsers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/takingQuiz.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/takingQuiz.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +172,7 @@
       <workItem from="1750353248776" duration="14097000" />
       <workItem from="1751791205843" duration="18176000" />
       <workItem from="1751810608444" duration="24000" />
-      <workItem from="1751905081658" duration="10696000" />
+      <workItem from="1751905081658" duration="11642000" />
     </task>
     <task id="LOCAL-00001" summary="added gitIgnore">
       <option name="closed" value="true" />
@@ -275,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751792189972</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="I updated system so information is stored in database and made Admin draft">
+      <option name="closed" value="true" />
+      <created>1751917037830</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1751917037830</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +268,8 @@
     <MESSAGE value="Early Draft for homePage" />
     <MESSAGE value="Working Messaging System" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="I updated system so information is stored in database and made Admin draft" />
+    <option name="LAST_COMMIT_MESSAGE" value="I updated system so information is stored in database and made Admin draft" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
