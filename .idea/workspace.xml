@@ -4,8 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="Working Messaging System">
+    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/AdminDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Announcement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/MessagesDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/AdminControlPanelServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/SubmitQuizServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/Score.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuizDataBase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/QuizDataBase.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/QuizDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/QuizDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/AccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/AccountManagerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/FillInBlank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/FillInBlank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Messages.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/MultipleChoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/MultipleChoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/MyDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/MyDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Option.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Option.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/PictureResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/PictureResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/QuestionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/QuestionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Questions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/CreateQuizServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/CreateQuizServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/FriendReqServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/FriendReqServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/MessageLogicServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/MessageLogicServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/TakeQuizServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/TakeQuizServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/FriendList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/FriendList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/filteredUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/filteredUsers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/takingQuiz.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/takingQuiz.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +59,12 @@
     &quot;assignee&quot;: &quot;GiorgiGuloiani&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Freeuni-Lekva/oop-final-project-team-1.git",
-    "accountId": "3cb4c241-8ba5-4d42-8f8b-e6ad2dedd3a9"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Freeuni-Lekva/oop-final-project-team-1.git&quot;,
+    &quot;accountId&quot;: &quot;3cb4c241-8ba5-4d42-8f8b-e6ad2dedd3a9&quot;
   }
-}]]></component>
+}</component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -54,30 +83,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.quiz-website [clean].executor": "Run",
-    "Maven.quiz-website [package].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Smart Tomcat.Tomcat: oop-final-project-team-1.executor": "Run",
-    "Smart Tomcat.Tomcat: quiz-website.executor": "Run",
-    "Tomcat Server.Tomcat 10.1.41.executor": "Run",
-    "git-widget-placeholder": "my-feature",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ggulo/IdeaProjects/oop-final-project-team-1/src/main/webapp/jsp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15429688",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "terminal",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.quiz-website [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.quiz-website [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Smart Tomcat.Tomcat: oop-final-project-team-1.executor&quot;: &quot;Run&quot;,
+    &quot;Smart Tomcat.Tomcat: quiz-website.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.Tomcat 10.1.41.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;my-feature&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ggulo/IdeaProjects/oop-final-project-team-1/src/main/webapp/jsp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15429688&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="models" />
@@ -110,6 +144,7 @@
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
+      <module name="quiz-website" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,9 +158,6 @@
       <option name="catalinaBase" value="" />
       <option name="contextPath" value="/quiz-website" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp/jsp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -167,6 +199,9 @@
       <workItem from="1750088678613" duration="10737000" />
       <workItem from="1750162845760" duration="19685000" />
       <workItem from="1750353248776" duration="14097000" />
+      <workItem from="1751791205843" duration="18176000" />
+      <workItem from="1751810608444" duration="24000" />
+      <workItem from="1751905081658" duration="10696000" />
     </task>
     <task id="LOCAL-00001" summary="added gitIgnore">
       <option name="closed" value="true" />
@@ -224,7 +259,23 @@
       <option name="project" value="LOCAL" />
       <updated>1750366931713</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary=".">
+      <option name="closed" value="true" />
+      <created>1751792009610</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1751792009611</updated>
+    </task>
+    <task id="LOCAL-00009" summary=".">
+      <option name="closed" value="true" />
+      <created>1751792189972</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1751792189972</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +288,8 @@
     <MESSAGE value="LoginAndRegisterLogic with Hashing" />
     <MESSAGE value="Early Draft for homePage" />
     <MESSAGE value="Working Messaging System" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working Messaging System" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

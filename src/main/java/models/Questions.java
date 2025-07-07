@@ -11,4 +11,5 @@ public abstract class Questions  {
 
     public int getId() {return id;};
     public String getQuestion() {return question;};
+    public abstract String getCorrectAnswer();
 }

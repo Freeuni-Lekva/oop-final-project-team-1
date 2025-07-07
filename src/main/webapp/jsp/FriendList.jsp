@@ -1,4 +1,4 @@
-<%@ page import="models.AccountManager" %>
+<%@ page import="models.AccountManagerDAO" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -7,7 +7,7 @@
 </head>
 <body>
 <%
-    AccountManager am = (AccountManager) application.getAttribute("accountManager");
+    AccountManagerDAO am = (AccountManagerDAO) application.getAttribute("accountManager");
     ArrayList<String> friends = am.getFriends((String) session.getAttribute("userName"));
     if (friends != null) {
         for (String friend : friends) {

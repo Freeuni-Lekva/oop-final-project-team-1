@@ -1,6 +1,7 @@
-<%@ page import="models.AccountManager" %>
+<%@ page import="models.AccountManagerDAO" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="models.Messages" %><%--
+<%@ page import="models.MessagesDAO" %>
+<%@ page import="java.sql.SQLException" %><%--
   Created by IntelliJ IDEA.
   User: lukss
   Date: 6/17/2025
@@ -27,73 +28,71 @@
 <body>
 <h1>Search Result:</h1>
 <%
-    AccountManager am = (AccountManager) application.getAttribute("accountManager");
+    AccountManagerDAO am = (AccountManagerDAO) application.getAttribute("accountManager");
     String query = request.getParameter("query");
-    ArrayList<String> people = am.getPeople(query);
+
     String newFriend = request.getParameter("friendName");
-    String CurrentUser = (String) session.getAttribute("userName");
-    ArrayList<String> sentFriends = (ArrayList<String>) session.getAttribute(CurrentUser+"SendFriends");
-    Messages ms = (Messages) application.getAttribute("messages");
+    String currentUser = (String) session.getAttribute("userName");
 
-    if (sentFriends == null) {
-        sentFriends = new ArrayList<>();
-        session.setAttribute(CurrentUser+"SendFriends", sentFriends);
-    }
-    else {
-        sentFriends.add(newFriend);
-       Messages.Message m = new Messages.Message(newFriend,CurrentUser,"You Have A New Friend Suggestion From "+CurrentUser+".",true);
-        ms.addMessage(m);
-    }
+    MessagesDAO ms = (MessagesDAO) application.getAttribute("messages");
 
+    if (newFriend != null && !newFriend.equals(currentUser)) {
+
+        try {
+            am.sendFriendRequest(currentUser, newFriend);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        ms.addMessage(new MessagesDAO.Message(newFriend, currentUser,
+                "You have a new friend request from " + currentUser + ".", true));
+    }
+    ArrayList<String> people = am.getPeople(query);
     if (people != null) {
-        for (String p : people) {
-            if(!p.equals(CurrentUser)){
+        for (String user : people) {
+            if (!user.equals(currentUser)) {
 %>
-<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
-    <p style="margin: 0;"><%= p %></p>
-    <% if (sentFriends.contains(p)) { %>
-    <span style="color: green;">Friend Request sent</span>
-    <% }else if(am.isFriend(CurrentUser,p)){%>
-    <span style="color: green;">Friends</span>
-    <% }else if((session.getAttribute(p + "SendFriends" )!=null&&((ArrayList<String>)session.getAttribute(p + "SendFriends" )).contains(CurrentUser))){
-    %>
-    <form action="friend" method="post" style="display:inline;">
-        <input type="hidden" name="from" value="<%=p%>"/>
-        <input type="hidden" name="message" value="<%="You Have A New Friend Suggestion From "+p+"."%>"/>
-        <input type="hidden" name="action" value="accept"/>
-        <input type="hidden" name="from" value="filteredUser"/>
+<div>
+    <p><%= user %></p>
+    <% if (am.isFriend(currentUser, user)) { %>
+    <span>Friends</span>
+    <% } else if (am.hasPendingFriendRequest(currentUser, user)) { %>
+    <span>Friend request sent</span>
+    <% } else if (am.hasPendingFriendRequest(user, currentUser)) { %>
+    <form action="friend" method="post">
+        <input type="hidden" name="from" value="<%= user %>" />
+        <input type="hidden" name="message" value="You have a new friend request from <%= user %>." />
+        <input type="hidden" name="action" value="accept" />
+        <input type="hidden" name="source" value="filteredUsers" />
         <button type="submit">Accept</button>
     </form>
-
-
-    <form action="friend" method="post" style="display:inline;">
-        <input type="hidden" name="from" value="<%=p%>"/>
-        <input type="hidden" name="message" value="<%="You Have A New Friend Suggestion From "+p+"."%>"/>
-        <input type="hidden" name="action" value="reject"/>
-        <input type="hidden" name="from" value="filteredUser"/>
+    <form action="friend" method="post">
+        <input type="hidden" name="from" value="<%= user %>" />
+        <input type="hidden" name="message" value="You have a new friend request from <%= user %>." />
+        <input type="hidden" name="action" value="reject" />
+        <input type="hidden" name="source" value="filteredUsers" />
         <button type="submit">Reject</button>
     </form>
-    <%
-    }
-    else {%>
+    <% } else { %>
     <form action="filteredUsers.jsp" method="get">
         <input type="hidden" name="query" value="<%= query %>" />
-        <input type="hidden" name="friendName" value="<%= p %>" />
+        <input type="hidden" name="friendName" value="<%= user %>" />
         <button type="submit">Add Friend</button>
-    </form> <%
-    }%>
-
+    </form>
+    <% } %>
 </div>
 <%
-
+        }
     }
-}} else {
+} else {
 %>
 <p>No users found.</p>
 <%
     }
-
 %>
 
 </body>
 </html>
+
+
+
+

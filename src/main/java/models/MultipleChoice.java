@@ -12,4 +12,15 @@
     }
 
     public ArrayList<Option> getOptions() { return optionsList; }
-}
+
+        @Override
+        public String getCorrectAnswer() {
+        ArrayList<Option> options = getOptions();
+        for (Option option : options) {
+            if (option.isCorrect()) {
+                return String.valueOf(option.getId());
+            }
+        }
+            return "";
+        }
+    }

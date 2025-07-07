@@ -10,7 +10,9 @@ public class PictureResponse extends Questions{
         this.answer = answer;
         this.image = image;
     }
-
-    public String getCorrectAnswer() { return answer; }
+    @Override
+    public String getCorrectAnswer() {
+        return answer;
+    }
     public String getImage() { return image; }
 }

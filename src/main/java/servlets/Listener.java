@@ -6,31 +6,31 @@ import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
 import jakarta.servlet.http.HttpSessionListener;
-import models.AccountManager;
-import models.Messages;
-import models.MyDataBase;
-import models.Quiz;
+import models.*;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 @WebListener
 public class Listener implements ServletContextListener, HttpSessionListener {
-    AccountManager accManager = new AccountManager();
-    Messages messages = new Messages();
+
+
     ArrayList<Quiz> popularQuizzes = new ArrayList<Quiz>();
     ArrayList<Quiz> quizzes=new ArrayList<>();
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
+        Connection dbConnection = MyDataBase.getConnection();
+
         ServletContext context = sce.getServletContext();
-        context.setAttribute("accountManager", accManager);
-        context.setAttribute("messages", messages);
+        AccountManagerDAO accountManagerDAO = new AccountManagerDAO(dbConnection);
+        MessagesDAO messagesDAO = new MessagesDAO(dbConnection);
+        AdminDAO adminDAO = new AdminDAO(dbConnection);
+        context.setAttribute("accountManager", accountManagerDAO);
+        context.setAttribute("messages", messagesDAO);
         context.setAttribute("popularQuizzes", popularQuizzes);
         context.setAttribute("quizzes", quizzes);
-        Connection dbConnection = MyDataBase.getConnection();
+        context.setAttribute("admin", adminDAO);
         QuizDAO quizDAO = new QuizDAO(dbConnection);
         context.setAttribute("quizDAO", quizDAO);
 
