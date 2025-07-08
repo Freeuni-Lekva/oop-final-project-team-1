@@ -10,7 +10,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="Added MultipleChoice class which was not seen for some reason">
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/QuizAttempt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/HistoryServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/RemoveQuizHistoryServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/RemoveQuizServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/RemoveUserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/promoteToAdminServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/HistoryPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuizDataBase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/QuizDataBase.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/QuizDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/QuizDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/AccountManagerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AccountManagerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/AdminDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AdminDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/MessagesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MessagesDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/MyDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/MyDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/AdminControlPanelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/AdminControlPanelServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/CreateQuizServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/CreateQuizServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/FriendReqServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/FriendReqServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/MessageLogicServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/MessageLogicServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/FriendList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/FriendList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/Quizzes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/Quizzes.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/createQuiz.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/createQuiz.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/filteredUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/filteredUsers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +49,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -105,7 +133,12 @@
       <recent name="models" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Smart Tomcat.Tomcat: oop-final-project-team-1">
+    <configuration name="QuizDataBase.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/QuizDataBase.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -121,9 +154,12 @@
       <predefined_log_file id="Tomcat Catalina Log" />
       <predefined_log_file id="Tomcat Manager Log" />
       <predefined_log_file id="Tomcat Host Manager Log" />
-      <option name="catalinaBase" value="" />
+      <option name="catalinaBase" value="C:\Users\ggulo\.SmartTomcat\oop-final-project-team-1\oop-final-project-team-1" />
       <option name="contextPath" value="/oop-final-project-team-1" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp/jsp" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -138,6 +174,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Database Script.QuizDataBase.sql" />
+      <item itemvalue="Smart Tomcat.Tomcat: oop-final-project-team-1" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -273,7 +313,8 @@
     <MESSAGE value="Early Draft for homePage" />
     <MESSAGE value="quizDao and database" />
     <MESSAGE value="Added MultipleChoice class which was not seen for some reason" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added MultipleChoice class which was not seen for some reason" />
+    <MESSAGE value="pulling reasons" />
+    <option name="LAST_COMMIT_MESSAGE" value="pulling reasons" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

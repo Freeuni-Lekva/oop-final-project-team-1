@@ -6,6 +6,14 @@
 <body>
 <h2>Create a New Quiz</h2>
 
+<%
+    String errorMessage = (String) request.getAttribute("errorMessage");
+    if (errorMessage != null) {
+%>
+<div style="color:red;"><%= errorMessage %></div>
+<%
+    }
+%>
 <form action="CreateQuizServlet" method="post">
     <label for="quizTitle">Quiz Title:</label><br>
     <input type="text" id="quizTitle" name="quizTitle" required><br><br>

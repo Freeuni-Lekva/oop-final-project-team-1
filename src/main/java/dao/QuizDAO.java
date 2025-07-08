@@ -110,10 +110,6 @@ public class QuizDAO {
             Quiz quiz = new Quiz(rs.getString("title"), rs.getString("quizID"), rs.getInt("timesTaken"),rs.getString("creatorUsername"));
             recentQuizes.add(quiz);
         }
-
-
-
-
         return recentQuizes;
     }
     public ArrayList<Quiz> getRecentlyCreatedQuizzes() throws SQLException {
@@ -267,7 +263,7 @@ public class QuizDAO {
         if (rs.next()) {
             return rs.getInt("maxScore");
         }
-        return 0; // no score found
+        return 0;
     }
 
     private int getUserIdByUsername(String username) throws SQLException {
@@ -282,5 +278,47 @@ public class QuizDAO {
             throw new SQLException("User not found for username: " + username);
         }
     }
+
+
+    public ArrayList<Quiz> getAllQuizzes() throws SQLException {
+        String sql = "SELECT quizId, title, timesTaken, creatorUsername, creatorID FROM Quiz";
+        PreparedStatement stmt = connection.prepareStatement(sql);
+        ResultSet rs = stmt.executeQuery();
+
+        ArrayList<Quiz> quizzes = new ArrayList<>();
+        while (rs.next()) {
+            String creatorUsername = rs.getString("creatorUsername");
+            int quizId = rs.getInt("quizId");
+            int timesTaken = rs.getInt("timesTaken");
+            Quiz quiz = new Quiz(rs.getString("title"), String.valueOf(quizId), timesTaken, creatorUsername);
+            quizzes.add(quiz);
+        }
+        return quizzes;
+    }
+    public List<QuizAttempt> getUserQuizHistory(String username, int limit) throws SQLException {
+        String sql = "SELECT q.quizId, q.title, q.timesTaken, q.creatorUsername, s.score, s.attemptTime " +
+                "FROM Score s JOIN Quiz q ON s.quizId = q.quizId " +
+                "WHERE s.username = ? ORDER BY s.attemptTime DESC LIMIT ?";
+        PreparedStatement stmt = connection.prepareStatement(sql);
+        stmt.setString(1, username);
+        stmt.setInt(2, limit);
+        ResultSet rs = stmt.executeQuery();
+        List<QuizAttempt> history = new ArrayList<>();
+        while (rs.next()) {
+            Quiz quiz = new Quiz(
+                    rs.getString("title"),
+                    String.valueOf(rs.getInt("quizId")),
+                    rs.getInt("timesTaken"),
+                    rs.getString("creatorUsername")
+            );
+
+            int score = rs.getInt("score");
+            Timestamp attemptTime = rs.getTimestamp("attemptTime");
+
+            history.add(new QuizAttempt(quiz, score, attemptTime));
+        }
+        return history;
+    }
+
 
 }

@@ -1,5 +1,8 @@
 package servlets;
 
+import dao.AccountManagerDAO;
+import dao.AdminDAO;
+import dao.MessagesDAO;
 import dao.QuizDAO;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletContextEvent;
