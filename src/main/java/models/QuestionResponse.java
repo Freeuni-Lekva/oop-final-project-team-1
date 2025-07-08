@@ -8,6 +8,9 @@ public class QuestionResponse extends Questions{
         super(id, questionText);
         this.answer = answer;
     }
+    @Override
+    public String getCorrectAnswer() {
 
-    public String getCorrectAnswer() { return answer; }
+        return answer;
+    }
 }

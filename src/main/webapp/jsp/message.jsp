@@ -1,5 +1,5 @@
-<%@ page import="models.AccountManager" %>
-<%@ page import="models.Messages" %><%--
+<%@ page import="models.AccountManagerDAO" %>
+<%@ page import="models.MessagesDAO" %><%--
   Created by IntelliJ IDEA.
   User: lukss
   Date: 6/17/2025
@@ -16,7 +16,7 @@
 <%
    String type =  request.getParameter("messageType");
 
-    Messages ms = (Messages) session.getAttribute("messages");
+    MessagesDAO ms = (MessagesDAO) session.getAttribute("messages");
     if ("Friend Request".equals(type)) {
         String from = request.getParameter("from");
         String s = request.getParameter("message");
@@ -33,6 +33,9 @@
 </form>
 
 
+
+<form action="HomePage.jsp" method="post" style="display:inline;">
+    <input type="hidden" name="from" value="<%=from%>"/>
 <form action="friend" method="post" style="display:inline;">
     <input type="hidden" name="from" value="<%=from%>"/>
     <input type="hidden" name="message" value="<%=s%>"/>
