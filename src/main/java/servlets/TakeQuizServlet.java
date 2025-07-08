@@ -17,6 +17,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet("/TakeQuizServlet")
 public class TakeQuizServlet extends HttpServlet {
@@ -25,11 +26,26 @@ public class TakeQuizServlet extends HttpServlet {
         int quizId = Integer.parseInt(request.getParameter("quizId"));
         QuizDAO quizDAO = (QuizDAO) getServletContext().getAttribute("quizDAO");
 
+        List<Map<String, Object>> topScorers = null;
+        int highestUserScore = 0;
+
         try {
+            topScorers = quizDAO.getTopScorersForQuiz(quizId);
             List<Questions> questions = quizDAO.getQuestionsForQuiz(quizId);
             HttpSession session = request.getSession();
+            session.setAttribute("topScorers", topScorers);
             session.setAttribute("questions", questions);
             session.setAttribute("quizId", quizId);
+
+            String username = (String) session.getAttribute("userName");
+            if (username != null) {
+                highestUserScore = quizDAO.getHighestScoreForUser(quizId, username);
+            }
+            request.setAttribute("highestUserScore", highestUserScore);
+
+
+
+
             request.setAttribute("index", 0);
             if(quizDAO.isRandom(quizId)) Collections.shuffle(questions);
             RequestDispatcher dispatcher = request.getRequestDispatcher("takingQuiz.jsp");

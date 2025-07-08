@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import models.AccountManager;
+import models.AccountManagerDAO;
 
 import java.io.IOException;
 
@@ -16,7 +16,7 @@ public class LoginServlet extends HttpServlet {
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-            AccountManager accManager = (AccountManager) request.getServletContext().getAttribute("accountManager");
+            AccountManagerDAO accManager = (AccountManagerDAO) request.getServletContext().getAttribute("accountManager");
         if(accManager.isCorrectPas(request.getParameter("name"), request.getParameter("password"))){
             RequestDispatcher rd = getServletContext().getRequestDispatcher("/HomePage.jsp");
 
