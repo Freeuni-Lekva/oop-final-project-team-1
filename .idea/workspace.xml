@@ -9,21 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/CreateQuizServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/TakeQuizServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/addingQuestionsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/addingQuestions.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/createQuiz.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/takingQuiz.jsp" afterDir="false" />
+    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="early logic for creat/take quiz">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizDataBase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/QuizDataBase.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/QuizDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/QuizDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/MyDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/MyDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/QuizzesMainPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/QuizzesMainPageServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/Quizzes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/Quizzes.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +38,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Freeuni-Lekva/oop-final-project-team-1.git&quot;,
-    &quot;accountId&quot;: &quot;0c8176c7-5774-46b1-963b-512b7e943d6c&quot;
+    &quot;accountId&quot;: &quot;6d053ece-947e-4205-bcb9-798b305b73bf&quot;
   }
 }</component>
   <component name="LogFilters">
@@ -82,7 +69,7 @@
     &quot;Smart Tomcat.Tomcat: quiz-website.executor&quot;: &quot;Run&quot;,
     &quot;Tomcat Server.Tomcat 10.1.41.executor&quot;: &quot;Run&quot;,
     &quot;Tomcat Server.message.jsp.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/quiz-logic&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/ggulo/IdeaProjects/oop-final-project-team-1/src/main/webapp/jsp&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -202,6 +189,7 @@
       <workItem from="1750088678613" duration="10737000" />
       <workItem from="1750162845760" duration="20052000" />
       <workItem from="1750219959423" duration="4372000" />
+      <workItem from="1751616860675" duration="1555000" />
     </task>
     <task id="LOCAL-00001" summary="added gitIgnore">
       <option name="closed" value="true" />
@@ -275,11 +263,30 @@
       <option name="project" value="LOCAL" />
       <updated>1750874513347</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="early logic for creat/take quiz">
+      <option name="closed" value="true" />
+      <created>1751049870037</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1751049870038</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added gitIgnore" />
@@ -287,7 +294,8 @@
     <MESSAGE value="Inntialize ProjectWeb Struture Test" />
     <MESSAGE value="LoginAndRegisterLogic with Hashing" />
     <MESSAGE value="Early Draft for homePage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Early Draft for homePage" />
+    <MESSAGE value="early logic for creat/take quiz" />
+    <option name="LAST_COMMIT_MESSAGE" value="early logic for creat/take quiz" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
