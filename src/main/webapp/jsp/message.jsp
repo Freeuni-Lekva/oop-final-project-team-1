@@ -1,5 +1,5 @@
-<%@ page import="models.AccountManagerDAO" %>
-<%@ page import="models.MessagesDAO" %><%--
+<%@ page import="dao.AccountManagerDAO" %>
+<%@ page import="dao.MessagesDAO" %><%--
   Created by IntelliJ IDEA.
   User: lukss
   Date: 6/17/2025

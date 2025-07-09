@@ -1,6 +1,6 @@
-<%@ page import="models.AccountManagerDAO" %>
+<%@ page import="dao.AccountManagerDAO" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="models.MessagesDAO" %>
+<%@ page import="dao.MessagesDAO" %>
 <%@ page import="java.sql.SQLException" %><%--
   Created by IntelliJ IDEA.
   User: lukss

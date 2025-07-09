@@ -32,11 +32,11 @@ CREATE TABLE Quiz (
                       quizId          INT PRIMARY KEY AUTO_INCREMENT,
                       title           VARCHAR(200) NOT NULL,
                       creatorUsername VARCHAR(40),
-                        creatorID INT,
+                        creatorID INT NULL,
                       timeLimitSec    INT,
                       timesTaken      INT DEFAULT 0,
                     randomQuiz        BOOLEAN,
-                         FOREIGN KEY (creatorID) REFERENCES Users(userID)
+                         FOREIGN KEY (creatorID) REFERENCES Users(userID)ON DELETE SET NULL
 );
 
 
@@ -127,4 +127,7 @@ CREATE TABLE FriendRequests (
                                 FOREIGN KEY (senderId) REFERENCES Users(userId),
                                 FOREIGN KEY (recipientId) REFERENCES Users(userId)
 );
+
+INSERT INTO Users (username, passwordHash, isAdmin)
+VALUES ('adminUser', '7c4a8d09ca3762af61e59520943dc26494f8941b', TRUE);
 
