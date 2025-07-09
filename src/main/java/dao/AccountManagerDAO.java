@@ -1,4 +1,4 @@
-package models;
+package dao;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -7,8 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class AccountManagerDAO {
     private final Connection conn;
@@ -211,6 +209,19 @@ public class AccountManagerDAO {
             stmt.setInt(2, recipientId);
             stmt.executeUpdate();
         }
+    }
+    public ArrayList<String> getAllUsernames() {
+        ArrayList<String> usernames = new ArrayList<>();
+        String sql = "SELECT username FROM Users";
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                usernames.add(rs.getString("username"));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return usernames;
     }
 
 }

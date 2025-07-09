@@ -16,7 +16,16 @@ import java.sql.SQLException;
 public class CreateQuizServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String title = request.getParameter("quizTitle");
+        int numResponseQuestions = Integer.parseInt(request.getParameter("numResponseQuestions"));
+        int numFillQuestions = Integer.parseInt(request.getParameter("numFillQuestions"));
+        int numPictureQuestions = Integer.parseInt(request.getParameter("numPictureQuestions"));
+        int numMcQuestions = Integer.parseInt(request.getParameter("numMcQuestions"));
 
+        if (numResponseQuestions + numFillQuestions + numPictureQuestions + numMcQuestions == 0) {
+            request.setAttribute("errorMessage", "You must add at least one question.");
+            request.getRequestDispatcher("/createQuiz.jsp").forward(request, response);
+            return;
+        }
         String username = (String) request.getSession().getAttribute("userName");
         QuizDAO quizDAO = (QuizDAO) getServletContext().getAttribute("quizDAO");
 
