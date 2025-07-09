@@ -6,11 +6,11 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
-import models.AccountManager;
-import models.Messages;
+import models.AccountManagerDAO;
+import models.MessagesDAO;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 @WebServlet("/friend")
@@ -18,29 +18,30 @@ public class FriendReqServlet extends HttpServlet {
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        AccountManager acc = (AccountManager) request.getServletContext().getAttribute("accountManager");
-        Messages ms = (Messages) request.getServletContext().getAttribute("messages");
+        AccountManagerDAO acc = (AccountManagerDAO) request.getServletContext().getAttribute("accountManager");
+        MessagesDAO ms = (MessagesDAO) request.getServletContext().getAttribute("messages");
         String curr = (String) request.getSession().getAttribute("userName");
 
-        if ("accept".equals(request.getParameter("action"))) {
-            acc.addFriend(curr, request.getParameter("from"));
 
-            Messages.Message m = new Messages.Message(request.getParameter("from"), "System", curr + " Has Accepted Your Friend Request", false);
+
+        if ("accept".equals(request.getParameter("action"))) {
+            try {
+                acc.addFriend(curr, request.getParameter("from"));
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+
+            MessagesDAO.Message m = new MessagesDAO.Message(request.getParameter("from"), "System", curr + " Has Accepted Your Friend Request", false);
             ms.addMessage(m);
             String mes = request.getParameter("message");
-            ArrayList<Messages.Message> tmp = ms.getMessages(curr);
-            int removeIndex = -1;
-            for (int i = 0; i < ms.getMessages(curr).size(); i++) {
-                if (tmp.get(i).from.equals(request.getParameter("from")) && tmp.get(i).message.equals(mes)) {
-                    removeIndex = i;
-                    break;
-                }
+            MessagesDAO.Message toRemove = new MessagesDAO.Message(curr, request.getParameter("from"), mes, true);
+            ms.removeMessage(toRemove);
+            try {
+                acc.removeFriendRequest(request.getParameter("from"), curr);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
             }
-            tmp.remove(removeIndex);
-            ms.messages.put(curr, tmp);
-            ArrayList<String> sent = (ArrayList<String>) request.getSession().getAttribute(request.getParameter("from") + "SendFriends");
-            sent.remove(curr);
-            request.getSession().setAttribute(request.getParameter("from") + "SendFriends", sent);
+
             RequestDispatcher rd = getServletContext().getRequestDispatcher("/HomePage.jsp");
             ;
             if (request.getParameter("from").equals("filteredUser"))

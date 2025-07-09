@@ -10,13 +10,33 @@ DROP TABLE IF EXISTS FillInBlankQuestion;
 DROP TABLE IF EXISTS QuestionResponse;
 DROP TABLE IF EXISTS Question;
 DROP TABLE IF EXISTS Quiz;
+DROP TABLE IF EXISTS Friends;
+DROP TABLE IF EXISTS Messages;
+DROP TABLE IF EXISTS Announcements;
+DROP TABLE IF EXISTS FriendRequests;
+DROP TABLE IF EXISTS Users;
+
+
+
+
+CREATE TABLE Users (
+                      userId          INT PRIMARY KEY AUTO_INCREMENT,
+                      username VARCHAR(40),
+                      passwordHash VARCHAR(40),
+                     isAdmin BOOLEAN DEFAULT FALSE
+
+
+);
 
 CREATE TABLE Quiz (
                       quizId          INT PRIMARY KEY AUTO_INCREMENT,
                       title           VARCHAR(200) NOT NULL,
                       creatorUsername VARCHAR(40),
+                        creatorID INT,
                       timeLimitSec    INT,
-                      timesTaken      INT DEFAULT 0
+                      timesTaken      INT DEFAULT 0,
+                    randomQuiz        BOOLEAN,
+                         FOREIGN KEY (creatorID) REFERENCES Users(userID)
 );
 
 
@@ -64,12 +84,47 @@ CREATE TABLE MultipleChoiceOption (
 );
 
 
-
 CREATE TABLE Score (
                        scoreId INT PRIMARY KEY AUTO_INCREMENT,
                        quizId INT NOT NULL,
                        username VARCHAR(50) NOT NULL,
+                        userId INT,
                        score INT NOT NULL,
                        attemptTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                       FOREIGN KEY (quizId) REFERENCES Quiz(quizId)
+                       FOREIGN KEY (quizId) REFERENCES Quiz(quizId),
+                       FOREIGN KEY (userId) REFERENCES Users(userID)
 );
+
+CREATE TABLE Friends (
+                         userId INT NOT NULL,
+                         friendId INT NOT NULL,
+                         PRIMARY KEY (userId, friendId),
+                         FOREIGN KEY (userId) REFERENCES Users(userId),
+                         FOREIGN KEY (friendId) REFERENCES Users(userId)
+);
+CREATE TABLE Messages (
+                          messageId INT PRIMARY KEY AUTO_INCREMENT,
+                          senderId INT NOT NULL,
+                          recipientId INT NOT NULL,
+                          message TEXT NOT NULL,
+                          friendRequest BOOLEAN DEFAULT FALSE,
+                          sentAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                          FOREIGN KEY (senderId) REFERENCES Users(userId),
+                          FOREIGN KEY (recipientId) REFERENCES Users(userId)
+);
+CREATE TABLE Announcements (
+                               id INT AUTO_INCREMENT PRIMARY KEY,
+                               title VARCHAR(200),
+                               message TEXT,
+                               postedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE FriendRequests (
+                                requestId INT PRIMARY KEY AUTO_INCREMENT,
+                                senderId INT NOT NULL,
+                                recipientId INT NOT NULL,
+                                sentAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                                status ENUM('PENDING', 'ACCEPTED', 'REJECTED') DEFAULT 'PENDING',
+                                FOREIGN KEY (senderId) REFERENCES Users(userId),
+                                FOREIGN KEY (recipientId) REFERENCES Users(userId)
+);
+

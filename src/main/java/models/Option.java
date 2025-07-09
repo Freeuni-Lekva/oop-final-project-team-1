@@ -14,4 +14,5 @@ public class Option {
     public int getId() { return id; }
     public String getOptionText() { return optionText; }
     public boolean isCorrect() { return isCorrect; }
+
 }

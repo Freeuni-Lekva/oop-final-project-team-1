@@ -13,12 +13,16 @@ public class QuizDAO {
         this.connection = connection;
     }
 
-    public int insertQuiz(String title, String creatorUsername, int timeLimitSec) throws SQLException {
-        String sql = "INSERT INTO Quiz (title, creatorUsername, timeLimitSec) VALUES (?, ?, ?)";
+ public int insertQuiz(String title, String creatorUsername, int timeLimitSec, boolean randQuiz) throws SQLException {
+        int creatorID = getUserIdByUsername(creatorUsername); // same helper as before
+
+        String sql = "INSERT INTO Quiz (title, creatorUsername, creatorID, timeLimitSec, randomQuiz) VALUES (?, ?, ?, ?, ?)";
         PreparedStatement stmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
         stmt.setString(1, title);
         stmt.setString(2, creatorUsername);
-        stmt.setInt(3, timeLimitSec);
+        stmt.setInt(3, creatorID);
+        stmt.setInt(4, timeLimitSec);
+        stmt.setBoolean(5, randQuiz);
         stmt.executeUpdate();
 
         ResultSet rs = stmt.getGeneratedKeys();
@@ -28,7 +32,6 @@ public class QuizDAO {
             throw new SQLException("Failed to retrieve generated quiz ID.");
         }
     }
-
 
     public int insertQuestion(int quizId, String type, String questionText) throws SQLException {
         String sql = "INSERT INTO Question (quizId, type, text) VALUES (?, ?, ?)";
@@ -98,7 +101,7 @@ public class QuizDAO {
 
     public ArrayList<Quiz> getRecentlyTakenQuizzes(String username) throws SQLException {
         ArrayList<Quiz> recentQuizes = new ArrayList<>();
-        String sql="SELECT q.quizId, q.title, q.timesTaken FROM Score s JOIN Quiz q ON s.quizId = q.quizId WHERE s.username = ? ORDER BY s.attemptTime DESC LIMIT ?" ;
+        String sql="SELECT q.quizId, q.title, q.timesTaken ,q.creatorUsername FROM Score s JOIN Quiz q ON s.quizId = q.quizId WHERE s.username = ? ORDER BY s.attemptTime DESC LIMIT ?" ;
         PreparedStatement pstmt = connection.prepareStatement(sql);
         pstmt.setString(1, username);
         pstmt.setInt(2, numberOfQuizzesShown);
@@ -140,7 +143,16 @@ public class QuizDAO {
 
         return quizzList;
     }
-
+    public boolean isRandom(int quizId) throws SQLException {
+        String sql="SELECT * FROM quiz WHERE quizId = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1, quizId);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        if(resultSet.next()) {
+            return resultSet.getBoolean("randomQuiz");
+        }
+        throw new RuntimeException("Quiz id not found");
+    }
 
     public List<Questions> getQuestionsForQuiz(int quizId) throws SQLException {
         ArrayList<Questions> questions = new ArrayList<>();
@@ -219,4 +231,56 @@ public class QuizDAO {
         }
         return new MultipleChoice(questionId, questionText, options);
     }
+    public void insertScore(int quizId, String username, int score) throws SQLException {
+        int userId = getUserIdByUsername(username);
+
+        String sql = "INSERT INTO Score (quizId, username, userId, score) VALUES (?, ?, ?, ?)";
+        PreparedStatement stmt = connection.prepareStatement(sql);
+        stmt.setInt(1, quizId);
+        stmt.setString(2, username);
+        stmt.setInt(3, userId);
+        stmt.setInt(4, score);
+        stmt.executeUpdate();
+    }
+    public List<Map<String, Object>> getTopScorersForQuiz(int quizId) throws SQLException {
+        String sql = "SELECT * FROM (SELECT username, score, RANK() OVER (ORDER BY score DESC, attemptTime ASC) AS `rank` FROM Score WHERE quizId = ?) ranked WHERE `rank` <= 3";
+
+        PreparedStatement stmt = connection.prepareStatement(sql);
+        stmt.setInt(1, quizId);
+        ResultSet rs = stmt.executeQuery();
+
+        List<Map<String, Object>> topScorers = new ArrayList<>();
+        while (rs.next()) {
+            Map<String, Object> entry = new HashMap<>();
+            entry.put("username", rs.getString("username"));
+            entry.put("score", rs.getInt("score"));
+            topScorers.add(entry);
+        }
+        return topScorers;
+    }
+    public int getHighestScoreForUser(int quizId, String username) throws SQLException {
+        String sql = "SELECT MAX(score) as maxScore FROM Score WHERE quizId = ? AND username = ?";
+        PreparedStatement stmt = connection.prepareStatement(sql);
+        stmt.setInt(1, quizId);
+        stmt.setString(2, username);
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+            return rs.getInt("maxScore");
+        }
+        return 0; // no score found
+    }
+
+    private int getUserIdByUsername(String username) throws SQLException {
+        String sql = "SELECT userId FROM Users WHERE username = ?";
+        PreparedStatement stmt = connection.prepareStatement(sql);
+        stmt.setString(1, username);
+        ResultSet rs = stmt.executeQuery();
+
+        if (rs.next()) {
+            return rs.getInt("userId");
+        } else {
+            throw new SQLException("User not found for username: " + username);
+        }
+    }
+
 }
