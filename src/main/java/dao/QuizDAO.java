@@ -14,7 +14,7 @@ public class QuizDAO {
     }
 
  public int insertQuiz(String title, String creatorUsername, int timeLimitSec, boolean randQuiz) throws SQLException {
-        int creatorID = getUserIdByUsername(creatorUsername); // same helper as before
+        int creatorID = getUserIdByUsername(creatorUsername);
 
         String sql = "INSERT INTO Quiz (title, creatorUsername, creatorID, timeLimitSec, randomQuiz) VALUES (?, ?, ?, ?, ?)";
         PreparedStatement stmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -321,4 +321,13 @@ public class QuizDAO {
     }
 
 
+    public void incrementTimesTaken(int quizId) {
+        String sql = "UPDATE Quiz SET timesTaken = timesTaken + 1 WHERE quizId = ?";
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, quizId);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

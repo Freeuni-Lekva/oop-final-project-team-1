@@ -16,7 +16,7 @@ public class QuizDisplayServlet extends HttpServlet {
         if (request.getParameter("isSinglePage").equals("true")) {
             rd = request.getRequestDispatcher("TakeQuizServlet");
         } else {
-            rd = request.getRequestDispatcher("FeedBackMethod.jsp");
+            rd = request.getRequestDispatcher("/FeedBackMethod.jsp");
         }
         rd.forward(request, response);
 

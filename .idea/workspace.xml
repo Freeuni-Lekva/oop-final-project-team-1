@@ -2,43 +2,62 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="oop-final-project-team-1:war" />
+      <artifact name="quiz-website:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="Added MultipleChoice class which was not seen for some reason">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/QuizAttempt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/HistoryServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/RemoveQuizHistoryServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/RemoveQuizServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/RemoveUserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/promoteToAdminServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/HistoryPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/admin.jsp" afterDir="false" />
+    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="Merge branch 'master' of https://github.com/Freeuni-Lekva/oop-final-project-team-1 into feature/quiz-logic&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/models/MyDataBase.java">
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/AddAnnouncementServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/CreateNewAccount.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/FeedBackMethod.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/FriendList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/HistoryPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/HomePage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/NameInUse.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Quizzes.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Score.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TextArea.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WrongCredentials.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/addingQuestions.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/createQuiz.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/filteredUsers.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/photo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/message.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/takingQuiz.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuizDataBase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/QuizDataBase.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/AccountManagerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AccountManagerDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/QuizDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/QuizDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/AccountManagerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AccountManagerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/AdminDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AdminDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/MessagesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MessagesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/MyDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/MyDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/PictureResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/PictureResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/AdminControlPanelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/AdminControlPanelServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/CreateQuizServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/CreateQuizServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/FriendReqServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/FriendReqServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/MessageLogicServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/MessageLogicServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/FriendList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/FriendList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/Quizzes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/Quizzes.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/createQuiz.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/createQuiz.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/filteredUsers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/filteredUsers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/HistoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/HistoryServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/QuizDisplayServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/QuizDisplayServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/SubmitQuizServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SubmitQuizServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/TakeQuizServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/TakeQuizServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/CreateNewAccount.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/FeedBackMethod.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/FriendList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/HistoryPage.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/HomePage.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/NameInUse.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/Quizzes.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/Score.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/TextArea.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/WrongCredentials.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/addingQuestions.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/admin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/createQuiz.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/filteredUsers.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/message.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/takingQuiz.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +68,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -66,7 +85,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Freeuni-Lekva/oop-final-project-team-1.git&quot;,
-    &quot;accountId&quot;: &quot;0c8176c7-5774-46b1-963b-512b7e943d6c&quot;
+    &quot;accountId&quot;: &quot;6d053ece-947e-4205-bcb9-798b305b73bf&quot;
   }
 }</component>
   <component name="LogFilters">
@@ -87,58 +106,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.quiz-website [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.quiz-website [package].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Smart Tomcat.Tomcat: oop-final-project-team-1.executor&quot;: &quot;Run&quot;,
-    &quot;Smart Tomcat.Tomcat: quiz-website.executor&quot;: &quot;Run&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.41.executor&quot;: &quot;Run&quot;,
-    &quot;Tomcat Server.index.jsp.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;your-feature-branch&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ggulo/IdeaProjects/oop-final-project-team-1/src/main/webapp/jsp&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15429688&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.quiz-website [clean].executor": "Run",
+    "Maven.quiz-website [package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Smart Tomcat.Tomcat: oop-final-project-team-1.executor": "Run",
+    "Smart Tomcat.Tomcat: quiz-website.executor": "Run",
+    "Tomcat Server.Tomcat 10.1.41.executor": "Run",
+    "Tomcat Server.message.jsp.executor": "Run",
+    "git-widget-placeholder": "feature/quiz-logic",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ggulo/IdeaProjects/oop-final-project-team-1/src/main/webapp/jsp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15429688",
+    "project.structure.side.proportion": "0.23121387",
+    "settings.editor.selected.configurable": "terminal",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1" />
       <recent name="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1\src\main\webapp\jsp" />
+      <recent name="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1" />
       <recent name="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1\.idea" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lukss\IdeaProjects\oop-final-project-team-1\src\main\webapp" />
+      <recent name="C:\Users\lukss\IdeaProjects\oop-final-project-team-1\src\main\webapp\images" />
       <recent name="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="models" />
-    </key>
   </component>
-  <component name="RunManager" selected="Smart Tomcat.Tomcat: oop-final-project-team-1">
-    <configuration name="QuizDataBase.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/QuizDataBase.sql" />
-      <script-mode>FILE</script-mode>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Smart Tomcat.Tomcat: quiz-website">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -154,9 +167,32 @@
       <predefined_log_file id="Tomcat Catalina Log" />
       <predefined_log_file id="Tomcat Manager Log" />
       <predefined_log_file id="Tomcat Host Manager Log" />
-      <option name="catalinaBase" value="C:\Users\ggulo\.SmartTomcat\oop-final-project-team-1\oop-final-project-team-1" />
+      <option name="catalinaBase" value="C:\Users\lukss\.SmartTomcat\oop-final-project-team-1\quiz-website" />
       <option name="contextPath" value="/oop-final-project-team-1" />
-      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp/jsp" />
+      <option name="docBase" value="C:\Users\ggulo\IdeaProjects\oop-final-project-team-1\src\main\webapp" />
+      <option name="extraClassPath" value="" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/10.1.41" />
+          <option name="path" value="$USER_HOME$/Desktop/apache-tomcat-10.1.41-windows-x64/apache-tomcat-10.1.41" />
+          <option name="version" value="10.1.41.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="quiz-website" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat: quiz-website" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="" />
+      <option name="contextPath" value="/quiz-website" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
       <option name="envOptions">
         <map />
       </option>
@@ -164,26 +200,26 @@
       <option name="tomcatInfo">
         <TomcatInfo>
           <option name="name" value="Apache Tomcat/10.1.41" />
-          <option name="path" value="$PROJECT_DIR$/../../../../apache-tomcat-10.1.41-windows-x64/apache-tomcat-10.1.41" />
+          <option name="path" value="$USER_HOME$/Desktop/apache-tomcat-10.1.41-windows-x64/apache-tomcat-10.1.41" />
           <option name="version" value="10.1.41.0" />
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
-      <module name="oop-final-project-team-1" />
+      <module name="quiz-website" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Database Script.QuizDataBase.sql" />
       <item itemvalue="Smart Tomcat.Tomcat: oop-final-project-team-1" />
+      <item itemvalue="Smart Tomcat.Tomcat: quiz-website" />
     </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
       </set>
     </attachedChunks>
   </component>
@@ -203,13 +239,11 @@
       <workItem from="1749903140161" duration="26000" />
       <workItem from="1749903175810" duration="4953000" />
       <workItem from="1750088678613" duration="10737000" />
-      <workItem from="1750162845760" duration="19685000" />
-      <workItem from="1750694421480" duration="8059000" />
-      <workItem from="1750770456054" duration="6698000" />
-      <workItem from="1750786712652" duration="6976000" />
-      <workItem from="1751391714077" duration="9000" />
-      <workItem from="1751478500885" duration="2383000" />
-      <workItem from="1751487467563" duration="6781000" />
+      <workItem from="1750162845760" duration="20052000" />
+      <workItem from="1750219959423" duration="4372000" />
+      <workItem from="1751616860675" duration="1555000" />
+      <workItem from="1752063098903" duration="2285000" />
+      <workItem from="1752148978654" duration="10297000" />
     </task>
     <task id="LOCAL-00001" summary="added gitIgnore">
       <option name="closed" value="true" />
@@ -253,57 +287,76 @@
     </task>
     <task id="LOCAL-00006" summary="Early Draft for homePage">
       <option name="closed" value="true" />
-      <created>1750196727982</created>
+      <created>1750183628823</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1750196727982</updated>
+      <updated>1750183628823</updated>
     </task>
     <task id="LOCAL-00007" summary="Early Draft for homePage">
       <option name="closed" value="true" />
-      <created>1750278057505</created>
+      <created>1750240267519</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1750278057505</updated>
+      <updated>1750240267519</updated>
     </task>
-    <task id="LOCAL-00008" summary="quizDao and database">
+    <task id="LOCAL-00008" summary="Merge branch 'master' of https://github.com/Freeuni-Lekva/oop-final-project-team-1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <option name="closed" value="true" />
-      <created>1750791567303</created>
+      <created>1750873621191</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1750791567304</updated>
+      <updated>1750873621191</updated>
     </task>
-    <task id="LOCAL-00009" summary="quizDao and database">
+    <task id="LOCAL-00009" summary="Merge branch 'master' of https://github.com/Freeuni-Lekva/oop-final-project-team-1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <option name="closed" value="true" />
-      <created>1750873054335</created>
+      <created>1750874513347</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1750873054335</updated>
+      <updated>1750874513347</updated>
     </task>
-    <task id="LOCAL-00010" summary="Added MultipleChoice class which was not seen for some reason">
+    <task id="LOCAL-00010" summary="early logic for creat/take quiz">
       <option name="closed" value="true" />
-      <created>1750873786404</created>
+      <created>1751049870037</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1750873786404</updated>
+      <updated>1751049870038</updated>
     </task>
-    <task id="LOCAL-00011" summary="Added MultipleChoice class which was not seen for some reason">
+    <task id="LOCAL-00011" summary="Merge branch 'master' of https://github.com/Freeuni-Lekva/oop-final-project-team-1 into feature/quiz-logic&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <option name="closed" value="true" />
-      <created>1750874161156</created>
+      <created>1752062935215</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1750874161156</updated>
+      <updated>1752062935215</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Merge branch 'master' of https://github.com/Freeuni-Lekva/oop-final-project-team-1 into feature/quiz-logic&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/models/MyDataBase.java">
+      <option name="closed" value="true" />
+      <created>1752066840622</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1752066840622</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added gitIgnore" />
@@ -311,10 +364,8 @@
     <MESSAGE value="Inntialize ProjectWeb Struture Test" />
     <MESSAGE value="LoginAndRegisterLogic with Hashing" />
     <MESSAGE value="Early Draft for homePage" />
-    <MESSAGE value="quizDao and database" />
-    <MESSAGE value="Added MultipleChoice class which was not seen for some reason" />
-    <MESSAGE value="pulling reasons" />
-    <option name="LAST_COMMIT_MESSAGE" value="pulling reasons" />
+    <MESSAGE value="early logic for creat/take quiz" />
+    <option name="LAST_COMMIT_MESSAGE" value="early logic for creat/take quiz" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

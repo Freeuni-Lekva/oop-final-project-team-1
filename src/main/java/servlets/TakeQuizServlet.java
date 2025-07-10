@@ -48,7 +48,7 @@ public class TakeQuizServlet extends HttpServlet {
 
             request.setAttribute("index", 0);
             if(quizDAO.isRandom(quizId)) Collections.shuffle(questions);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("takingQuiz.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/takingQuiz.jsp");
             dispatcher.forward(request, response);
         } catch (SQLException e) {
             throw new ServletException("Error loading quiz", e);

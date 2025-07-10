@@ -25,7 +25,7 @@ public class SubmitQuizServlet extends HttpServlet {
 
     List<Questions> questions = (List<Questions>) session.getAttribute("questions");
         int score = 0;
-        String username = (String) session.getAttribute("userName"); // or get it from request/session
+        String username = (String) session.getAttribute("userName");
         int quizId = (Integer) session.getAttribute("quizId");
 
         QuizDAO quizDAO= (QuizDAO) request.getServletContext().getAttribute("quizDAO");
@@ -67,6 +67,7 @@ public class SubmitQuizServlet extends HttpServlet {
         if(index==questions.size()-1) {
             try {
                 quizDAO.insertScore(quizId,username,score);
+                quizDAO.incrementTimesTaken(quizId);
 
             } catch (SQLException e) {
                 throw new RuntimeException(e);
