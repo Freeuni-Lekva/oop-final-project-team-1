@@ -37,7 +37,7 @@ public class CreateQuizServlet extends HttpServlet {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("addingQuestions.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/addingQuestions.jsp");
         requestDispatcher.forward(request,response);
 
 

@@ -27,7 +27,7 @@ import java.io.IOException;
             request.setAttribute("admin", admin);
             request.setAttribute("messages", messages);
             request.setAttribute("accountManager", accManager);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("admin.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/admin.jsp");
             dispatcher.forward(request, response);
         }
 
