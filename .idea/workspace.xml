@@ -9,8 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="added admin functions, added homepage history,">
+    <list default="true" id="a150f2aa-2a23-46de-865e-58e2604304a6" name="Changes" comment="pulling reasons">
+      <change afterPath="$PROJECT_DIR$/src/test/AccountManagerDaoTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/AdminDaoTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/MessagesDaoTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/QuizDaoTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/AccountManagerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AccountManagerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/AdminDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AdminDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/MessagesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MessagesDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/QuizDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/QuizDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/MyDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/MyDataBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -59,36 +70,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.quiz-website [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.quiz-website [package].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Smart Tomcat.Tomcat: oop-final-project-team-1.executor&quot;: &quot;Run&quot;,
-    &quot;Smart Tomcat.Tomcat: quiz-website.executor&quot;: &quot;Run&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.41.executor&quot;: &quot;Run&quot;,
-    &quot;Tomcat Server.index.jsp.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;your-feature-branch&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ggulo/IdeaProjects/oop-final-project-team-1/src/main/webapp/jsp&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15429688&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.AccountManagerDAOTest.executor": "Coverage",
+    "JUnit.AccountManagerDaoTests.executor": "Coverage",
+    "JUnit.AccountManagerDaoTests.testCheckIfAccountExists_true.executor": "Run",
+    "JUnit.AdminDaoTests.executor": "Coverage",
+    "JUnit.MessagesDaoTests.executor": "Coverage",
+    "JUnit.MessagesDaoTests.getMessagesReturnsMessages.executor": "Run",
+    "JUnit.MultipleChoiceTest.executor": "Coverage",
+    "JUnit.QuizDAOTest.executor": "Coverage",
+    "Maven.quiz-website [clean].executor": "Run",
+    "Maven.quiz-website [package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Smart Tomcat.Tomcat: oop-final-project-team-1.executor": "Run",
+    "Smart Tomcat.Tomcat: quiz-website.executor": "Run",
+    "Tomcat Server.Tomcat 10.1.41.executor": "Run",
+    "Tomcat Server.index.jsp.executor": "Run",
+    "git-widget-placeholder": "your-feature-branch",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ggulo/IdeaProjects/oop-final-project-team-1/src/main/webapp/jsp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15429688",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="models" />
@@ -105,11 +124,49 @@
       <recent name="models" />
     </key>
   </component>
-  <component name="RunManager" selected="Smart Tomcat.Tomcat: oop-final-project-team-1">
+  <component name="RunManager">
     <configuration name="QuizDataBase.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/QuizDataBase.sql" />
       <script-mode>FILE</script-mode>
       <method v="2" />
+    </configuration>
+    <configuration name="AccountManagerDaoTests.testCheckIfAccountExists_true" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oop-final-project-team-1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AccountManagerDaoTests" />
+      <option name="METHOD_NAME" value="testCheckIfAccountExists_true" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminDaoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oop-final-project-team-1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AdminDaoTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessagesDaoTests.getMessagesReturnsMessages" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oop-final-project-team-1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MessagesDaoTests" />
+      <option name="METHOD_NAME" value="getMessagesReturnsMessages" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MultipleChoiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="oop-final-project-team-1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MultipleChoiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -128,7 +185,10 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="catalinaBase" value="C:\Users\ggulo\.SmartTomcat\oop-final-project-team-1\oop-final-project-team-1" />
       <option name="contextPath" value="/oop-final-project-team-1" />
-      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp/jsp" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -145,8 +205,20 @@
     </configuration>
     <list>
       <item itemvalue="Database Script.QuizDataBase.sql" />
+      <item itemvalue="JUnit.AccountManagerDaoTests.testCheckIfAccountExists_true" />
+      <item itemvalue="JUnit.AdminDaoTests" />
+      <item itemvalue="JUnit.MessagesDaoTests.getMessagesReturnsMessages" />
+      <item itemvalue="JUnit.MultipleChoiceTest" />
       <item itemvalue="Smart Tomcat.Tomcat: oop-final-project-team-1" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MultipleChoiceTest" />
+        <item itemvalue="JUnit.MessagesDaoTests.getMessagesReturnsMessages" />
+        <item itemvalue="JUnit.AdminDaoTests" />
+        <item itemvalue="JUnit.AccountManagerDaoTests.testCheckIfAccountExists_true" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -290,12 +362,20 @@
     <MESSAGE value="Early Draft for homePage" />
     <MESSAGE value="quizDao and database" />
     <MESSAGE value="Added MultipleChoice class which was not seen for some reason" />
-    <MESSAGE value="pulling reasons" />
     <MESSAGE value="added admin functions, added homepage history," />
-    <option name="LAST_COMMIT_MESSAGE" value="added admin functions, added homepage history," />
+    <MESSAGE value="pulling reasons" />
+    <option name="LAST_COMMIT_MESSAGE" value="pulling reasons" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/oop_final_project_team_1$MultipleChoiceTest.ic" NAME="MultipleChoiceTest Coverage Results" MODIFIED="1752250677541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/oop_final_project_team_1$MessagesDaoTests.ic" NAME="MessagesDaoTests Coverage Results" MODIFIED="1752250261036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/oop_final_project_team_1$QuizDAOTest.ic" NAME="QuizDAOTest Coverage Results" MODIFIED="1752251576998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/oop_final_project_team_1$AdminDaoTests.ic" NAME="AdminDaoTests Coverage Results" MODIFIED="1752250223037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/oop_final_project_team_1$AccountManagerDAOTest.ic" NAME="AccountManagerDAOTest Coverage Results" MODIFIED="1752250239445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/oop_final_project_team_1$AccountManagerDaoTests.ic" NAME="AccountManagerDaoTests Coverage Results" MODIFIED="1752249792950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

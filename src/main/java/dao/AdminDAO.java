@@ -80,7 +80,7 @@ public class AdminDAO {
             return rs.getInt(1);
         }
     }
-    private int getUserId(String username) throws SQLException {
+    public int getUserId(String username) throws SQLException {
         String query = "SELECT userId FROM Users WHERE username = ?";
         try (PreparedStatement stmt = conn.prepareStatement(query)) {
             stmt.setString(1, username);
@@ -175,7 +175,7 @@ public class AdminDAO {
             executeDelete("DELETE FROM Question WHERE questionId = ?", questionId);
         }
     }
-    private void executeDelete(String sql, int param) throws SQLException {
+    public void executeDelete(String sql, int param) throws SQLException {
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setInt(1, param);
         stmt.executeUpdate();
