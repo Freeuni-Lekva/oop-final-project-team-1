@@ -6,11 +6,9 @@ import java.sql.SQLException;
 
 public class MyDataBase {
     private static Connection dbConnection;
-    private static final  String password="Edonona2001";
-
     static{
         try {
-                dbConnection = DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz_system","root",password);
+                dbConnection = DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz_system","root","Luka2004#");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

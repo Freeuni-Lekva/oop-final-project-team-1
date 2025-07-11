@@ -28,7 +28,7 @@ public class HistoryServlet extends HttpServlet {
         try {
             List<QuizAttempt> fullHistory = quizDAO.getUserQuizHistory(username, Integer.MAX_VALUE);
             req.setAttribute("fullHistory", fullHistory);
-            RequestDispatcher dispatcher = req.getRequestDispatcher("HistoryPage.jsp");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/HistoryPage.jsp");
             dispatcher.forward(req, resp);
         } catch (Exception e) {
             throw new ServletException(e);
