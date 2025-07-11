@@ -85,7 +85,7 @@ public class QuizDAO {
         stmt.setBoolean(3, isCorrect);
         stmt.executeUpdate();
     }
-    private void insertMultipleChoiceMeta(int questionId) throws SQLException {
+    public void insertMultipleChoiceMeta(int questionId) throws SQLException {
         String sql = "INSERT INTO MultipleChoiceQuestion (questionId) VALUES (?)";
         PreparedStatement stmt = connection.prepareStatement(sql);
         stmt.setInt(1, questionId);
@@ -181,7 +181,7 @@ public class QuizDAO {
         return questions;
     }
 
-    private QuestionResponse loadQuestionResponse(int questionId, String questionText) throws SQLException {
+    public QuestionResponse loadQuestionResponse(int questionId, String questionText) throws SQLException {
         String sql = "SELECT * FROM QuestionResponse WHERE questionId = ?";
         PreparedStatement stmt = connection.prepareStatement(sql);
         stmt.setInt(1, questionId);
@@ -191,7 +191,7 @@ public class QuizDAO {
         return new QuestionResponse(questionId, questionText, correctAnswer);
     }
 
-    private FillInBlank loadFillInBlank(int questionId, String questionText) throws SQLException {
+    public FillInBlank loadFillInBlank(int questionId, String questionText) throws SQLException {
         String sql = "SELECT * FROM FillInBlankQuestion WHERE questionId = ?";
         PreparedStatement stmt = connection.prepareStatement(sql);
         stmt.setInt(1, questionId);
@@ -201,7 +201,7 @@ public class QuizDAO {
         return new FillInBlank(questionId, questionText, correctAnswer);
     }
 
-    private PictureResponse loadPictureResponse(int questionId, String questionText) throws SQLException {
+    public PictureResponse loadPictureResponse(int questionId, String questionText) throws SQLException {
         String sql = "SELECT * FROM PictureQuestion WHERE questionId = ?";
         PreparedStatement stmt = connection.prepareStatement(sql);
         stmt.setInt(1, questionId);
@@ -212,7 +212,7 @@ public class QuizDAO {
         return new PictureResponse(questionId, questionText, imageUrl, correctAnswer);
     }
 
-    private MultipleChoice loadMultipleChoice(int questionId, String questionText) throws SQLException {
+    public MultipleChoice loadMultipleChoice(int questionId, String questionText) throws SQLException {
         String sql = "SELECT * FROM MultipleChoiceOption WHERE questionId = ?";
         PreparedStatement stmt = connection.prepareStatement(sql);
         stmt.setInt(1, questionId);
@@ -266,7 +266,7 @@ public class QuizDAO {
         return 0;
     }
 
-    private int getUserIdByUsername(String username) throws SQLException {
+    public int getUserIdByUsername(String username) throws SQLException {
         String sql = "SELECT userId FROM Users WHERE username = ?";
         PreparedStatement stmt = connection.prepareStatement(sql);
         stmt.setString(1, username);
@@ -330,4 +330,5 @@ public class QuizDAO {
             throw new RuntimeException(e);
         }
     }
+
 }

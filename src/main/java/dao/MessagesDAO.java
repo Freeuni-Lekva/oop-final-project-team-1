@@ -94,7 +94,7 @@ public class MessagesDAO {
         }
     }
 
-    private int getUserId(String username) throws SQLException {
+    public int getUserId(String username) throws SQLException {
         String sql = "SELECT userId FROM Users WHERE username = ?";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, username);

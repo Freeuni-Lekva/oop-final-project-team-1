@@ -55,7 +55,7 @@ public class AccountManagerDAO {
             throw new RuntimeException(e);
         }
     }
-    private String hash(String password) {
+    public String hash(String password) {
         MessageDigest digest;
         try {
             digest=MessageDigest.getInstance("SHA");
@@ -150,7 +150,7 @@ public class AccountManagerDAO {
         }
         return friends;
     }
-    private int getUserId(String username) throws SQLException {
+    public int getUserId(String username) throws SQLException {
         String query = "SELECT userId FROM Users WHERE username = ?";
         try (PreparedStatement stmt = conn.prepareStatement(query)) {
             stmt.setString(1, username);
